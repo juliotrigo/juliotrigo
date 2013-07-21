@@ -1,0 +1,1 @@
+from juliotrigo.settings.development import *

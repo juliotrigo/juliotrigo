@@ -6,7 +6,7 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'juliotrigo.views.home', name='home'),
+    url(r'^$', 'juliotrigo.views.home', name='home'),
     # url(r'^juliotrigo/', include('juliotrigo.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -14,4 +14,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
+)
+
+# Copied and changed from django.conf.urls.i18n
+urlpatterns += patterns('',
+    url(r'^i18n/setlang/$', 'accounts.views.custom_i18n', name='set_language'),
 )

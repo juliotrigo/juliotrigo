@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+{% load static from staticfiles %}
+{% static "css/base.css" as base_css %}
+
+<html lang="{{ LANGUAGE_CODE }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>juliotrigo - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
+    </head>
+    <body>
+    
+    juliotrigo
+    
+    </body>
+</html>

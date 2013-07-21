@@ -1,7 +1,19 @@
-# Django settings for juliotrigo project.
+"""Django settings for juliotrigo project."""
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+from __future__ import unicode_literals
+
+import os
+
+# To help us extend the defaults instead of overriding them with hardcoded values.
+from django.conf import global_settings as DEFAULT_SETTINGS
+
+PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__).replace('\\','/'), '..'))
+BASE_PATH = os.path.abspath(os.path.join(PROJECT_PATH, '..'))
+
+# This is defined here as a do-nothing function because we can't import
+# django.utils.translation -- that module depends on the settings.
+ugettext = lambda s: s
+
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -11,8 +23,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': os.path.join(BASE_PATH, 'sqlite3_juliotrigo.db'), # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -29,17 +41,19 @@ ALLOWED_HOSTS = []
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+#TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/London'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'                                             #I18N
 
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = True
+USE_I18N = True                                                     #I18N
 
 # If you set this to False, Django will not format dates, numbers and
 # calendars according to the current locale.
@@ -72,6 +86,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -93,8 +108,13 @@ TEMPLATE_LOADERS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
+    #'django.middleware.common.CommonMiddleware',
+    #'django.contrib.sessions.middleware.SessionMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',                    #I18N
+    'django.middleware.common.CommonMiddleware',
+    
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -111,6 +131,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(PROJECT_PATH, 'templates'),
 )
 
 INSTALLED_APPS = (
@@ -121,9 +142,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    #'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'accounts',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -154,3 +176,40 @@ LOGGING = {
         },
     }
 }
+
+
+####################
+# CORE             #
+####################
+
+#DEFAULT_CONTENT_TYPE = 'application/xhtml+xml'
+
+# List of processors used by RequestContext to populate the context.
+# Each one should be a callable that takes the request object as its
+# only parameter and returns a dictionary to add to the context.
+# Add new context processors here
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + ('accounts.context_processors.url', )
+
+# First day of week, to be used on calendars
+# 0 means Sunday, 1 means Monday...
+FIRST_DAY_OF_WEEK = 1
+
+# Languages we provide translations for, out of the box.
+LANGUAGES = (                                                       #I18N
+    ('en', ugettext('English')),
+    #('en-gb', ugettext('British English')),
+    ('es', ugettext('Spanish')),
+)
+
+LOCALE_PATHS = (                                                    #I18N
+    os.path.join(PROJECT_PATH, 'locale'),
+)
+
+############
+# FIXTURES #
+############
+
+# The list of directories to search for fixtures
+FIXTURE_DIRS = (
+    os.path.join(BASE_PATH, 'fixtures'),
+)
