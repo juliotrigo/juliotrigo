@@ -15,8 +15,28 @@
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
     </head>
     <body>
-    
-    juliotrigo
-    
+        <header id="page-header">
+            <div id="logo">
+                <a href="{% url 'home' %}">juliotrigo</a>
+            </div>
+            <div id="language-selection">
+                <form action="{% url 'set_language' %}" method="post">
+                    <div>
+                        {% csrf_token %}
+                        <input name="next" type="hidden" value="{{ get_full_path }}" />
+                        <select name="language">
+                            {% get_language_info_list for LANGUAGES as langs %}
+                            {% for language in langs %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        {# Translators: Language selection: submit button. #}
+                        <input type="submit" value="{% trans "Go" %}" />
+                    </div>
+                </form>
+            </div>
+        </header>
     </body>
 </html>
