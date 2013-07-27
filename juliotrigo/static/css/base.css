@@ -27,3 +27,41 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/********** HEADER **********/
+
+
+
+/********** CONTENT **********/
+
+#content-wrapper {
+    margin: 0px 0px 85px 0px;
+}
+
+/********** FOOTER **********/
+
+footer#bottom-bar {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1000;
+    
+    height: 70px;
+    background: white;
+}
+
+footer#bottom-bar li {
+    float: left;
+    padding: 5px 5px 5px 5px;
+    margin: 0px;
+    width: 65px;
+    
+    text-align: center;
+}
+
+.border-left {
+    border-left: 2px solid #0d83dd;
+}

@@ -7,6 +7,10 @@
 
 {% load static from staticfiles %}
 {% static "css/base.css" as base_css %}
+{% static "img/logos/twitter-bird-light-bgs.png" as twitter_logo %}
+{% static "img/logos/Octocat.png" as github_logo %}
+{% static "img/logos/LinkedIn_Logo60px.png" as linkedin_logo %}
+{% static "img/jt.png" as jt_logo %}
 
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
@@ -38,5 +42,34 @@
                 </form>
             </div>
         </header>
+        <div id="content-wrapper">
+
+        </div>
+        <footer id="bottom-bar">
+            <div>
+                <ul>
+                    <li>
+                        <a href="{% url 'home' %}">
+                            <img src="{{ jt_logo }}" alt="juliotrigo" height="55" width="55">
+                        </a>
+                    </li>
+                    <li class="border-left">
+                        <a href="https://github.com/juliotrigo">
+                            <img src="{{ github_logo }}" alt="juliotrigo" height="55" width="66">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://uk.linkedin.com/in/juliotrigo/en">
+                            <img src="{{ linkedin_logo }}" alt="juliotrigo" height="50" width="60">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/juliotrigo">
+                            <img src="{{ twitter_logo }}" alt="juliotrigo" height="55" width="55">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
