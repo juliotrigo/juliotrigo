@@ -10,7 +10,10 @@
 {% static "img/logos/twitter-bird-light-bgs.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
 {% static "img/logos/LinkedIn_Logo60px.png" as linkedin_logo %}
-{% static "img/jt.png" as jt_logo %}
+{% static "img/logos/jt.png" as jt_logo %}
+{% static "img/logos/juliotrigo_big.png" as juliotrigo_big_logo %}
+{% static "img/desktop/folder-icon-512x512.png" as folder_desktop %}
+{% static "img/logos/firefox_logo-only_RGB.png" as firefox_logo %}
 
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
@@ -21,7 +24,7 @@
     <body>
         <header id="page-header">
             <div id="logo">
-                <a href="{% url 'home' %}">juliotrigo</a>
+                <img src="{{ juliotrigo_big_logo }}" alt="juliotrigo" height="100" width="400">
             </div>
             <div id="language-selection">
                 <form action="{% url 'set_language' %}" method="post">
@@ -43,7 +46,38 @@
             </div>
         </header>
         <div id="content-wrapper">
-
+            <div class="file">
+                <p>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
+                        {% trans "Work" %}
+                    </a>
+                </p>
+            </div>
+            <div class="file">
+                <p>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
+                        {% trans "Projects" %}
+                    </a>
+                </p>
+            </div>
+            <div class="file">
+                <p>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                        {% trans "Contact" %}
+                    </a>
+                </p>
+            </div>
+            <div class="file">
+                <p>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                        {% trans "Language selection" %}
+                    </a>
+                </p>
+            </div>
         </div>
         <footer id="bottom-bar">
             <div>

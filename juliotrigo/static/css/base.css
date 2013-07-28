@@ -25,12 +25,50 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /********** HEADER **********/
 
+.file {
+    margin: 20px 20px 0px 20px;
+    padding: 0px;
+    width: 55px;
+}
 
+.file p {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    text-align: center;
+}
+
+.file p a {
+    color: white;
+}
+
+#logo {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+    width: 400px;
+    height: 100px;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+#language-selection {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    width: 13.3%;
+    height: 35px;
+    padding: 15px 0px 0px 0px;
+    text-align: center;
+    background-color: #deeeff;
+    border-radius: 0px 0px 10px 10px;
+}
 
 /********** CONTENT **********/
 
@@ -49,8 +87,8 @@ footer#bottom-bar {
     margin: 0px;
     z-index: 1000;
     
-    height: 70px;
-    background: white;
+    height: 65px;
+    background: #deeeff;
 }
 
 footer#bottom-bar li {
