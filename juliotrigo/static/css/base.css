@@ -92,12 +92,26 @@ footer#bottom-bar {
 }
 
 footer#bottom-bar li {
-    float: left;
     padding: 5px 5px 5px 5px;
     margin: 0px;
     width: 65px;
     
     text-align: center;
+}
+
+footer#bottom-bar li p {
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    text-align: center;
+}
+
+.align-left {
+    float: left;
+}
+
+.align-right {
+    float: right;
 }
 
 .border-left {

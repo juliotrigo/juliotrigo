@@ -82,25 +82,31 @@
         <footer id="bottom-bar">
             <div>
                 <ul>
-                    <li>
+                    <li class="align-left">
                         <a href="{% url 'home' %}">
                             <img src="{{ jt_logo }}" alt="juliotrigo" height="55" width="55">
                         </a>
                     </li>
-                    <li class="border-left">
+                    <li class="align-left border-left">
                         <a href="https://github.com/juliotrigo">
                             <img src="{{ github_logo }}" alt="juliotrigo" height="55" width="66">
                         </a>
                     </li>
-                    <li>
+                    <li class="align-left">
                         <a href="http://uk.linkedin.com/in/juliotrigo/en">
                             <img src="{{ linkedin_logo }}" alt="juliotrigo" height="50" width="60">
                         </a>
                     </li>
-                    <li>
+                    <li class="align-left">
                         <a href="https://twitter.com/juliotrigo">
                             <img src="{{ twitter_logo }}" alt="juliotrigo" height="55" width="55">
                         </a>
+                    </li>
+                    <li class="align-right">
+                        <p>{{ time }}</p>
+                    </li>
+                    <li class="align-right border-left">
+                        <p>LAN</p>
                     </li>
                 </ul>
             </div>
