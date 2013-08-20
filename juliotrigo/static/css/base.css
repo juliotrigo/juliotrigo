@@ -28,23 +28,10 @@ a:hover {
     text-decoration: none;
 }
 
-/********** HEADER **********/
+/********** CONTENT **********/
 
-.file {
-    margin: 20px 20px 0px 20px;
-    padding: 0px;
-    width: 55px;
-}
-
-.file p {
-    margin: 0px;
-    padding: 0px;
-    color: white;
-    text-align: center;
-}
-
-.file p a {
-    color: white;
+#content-wrapper {
+    margin: 0px 0px 85px 0px;
 }
 
 #logo {
@@ -70,10 +57,64 @@ a:hover {
     border-radius: 0px 0px 10px 10px;
 }
 
-/********** CONTENT **********/
+.file {
+    margin: 20px 20px 0px 20px;
+    padding: 0px;
+    width: 55px;
+}
 
-#content-wrapper {
-    margin: 0px 0px 85px 0px;
+.file > p {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.window {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 350px;
+    height: 250px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 7px 7px 2px 2px;
+    background-color: white;
+}
+
+#content-wrapper > .file > p {
+    color: white;
+}
+
+#content-wrapper > .file > p > a {
+    color: white;
+}
+
+section.window > .file > p {
+    color: black;
+}
+
+section.window > .file > p > a {
+    color: black;
+}
+
+section.window > h1 {
+    margin: 0px;
+    padding: 5px;
+    border-radius: 7px 7px 0px 0px;
+    
+    font-size: 1.0em;
+    font-style: normal;
+    font-weight: normal;    
+    color: white;
+    background-color: #535565; /* #535565 #4B4D5C */
+}
+
+section.window > h1 > a {
+    margin: 0px 10px 0px 0px;
+}
+
+#work {
+    /* display: none; */ /* TODO */
 }
 
 /********** FOOTER **********/

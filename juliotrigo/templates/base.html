@@ -14,6 +14,7 @@
 {% static "img/logos/juliotrigo_big.png" as juliotrigo_big_logo %}
 {% static "img/desktop/folder-icon-512x512.png" as folder_desktop %}
 {% static "img/logos/firefox_logo-only_RGB.png" as firefox_logo %}
+{% static "img/red-close-button.png" as close_button %}
 
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
@@ -22,7 +23,7 @@
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
     </head>
     <body>
-        <header id="page-header">
+        <div id="content-wrapper">
             <div id="logo">
                 <img src="{{ juliotrigo_big_logo }}" alt="juliotrigo" height="100" width="400">
             </div>
@@ -44,8 +45,6 @@
                     </div>
                 </form>
             </div>
-        </header>
-        <div id="content-wrapper">
             <div class="file">
                 <p>
                     <a href="{% url 'home' %}">
@@ -78,6 +77,7 @@
                     </a>
                 </p>
             </div>
+            {% block windows %}{% endblock %}
         </div>
         <footer id="bottom-bar">
             <div>
