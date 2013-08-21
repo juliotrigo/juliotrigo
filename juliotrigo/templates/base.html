@@ -21,6 +21,15 @@
         <meta charset="UTF-8">
         <title>juliotrigo - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
+        <script>
+        	function showstuff(boxid){
+        	   document.getElementById(boxid).style.visibility="visible";
+        	}
+        	 
+        	function hidestuff(boxid){
+        	   document.getElementById(boxid).style.visibility="hidden";
+        	}
+        </script>
     </head>
     <body>
         <div id="content-wrapper">
@@ -45,36 +54,28 @@
                     </div>
                 </form>
             </div>
-            <div class="file">
+            <div class="file" onclick="showstuff('work');">
                 <p>
-                    <a href="{% url 'home' %}">
-                        <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
-                        {% trans "Work" %}
-                    </a>
+                    <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
+                    {% trans "Work" %}
                 </p>
             </div>
             <div class="file">
                 <p>
-                    <a href="{% url 'home' %}">
-                        <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
-                        {% trans "Projects" %}
-                    </a>
+                    <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
+                    {% trans "Projects" %}
                 </p>
             </div>
             <div class="file">
                 <p>
-                    <a href="{% url 'home' %}">
-                        <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                        {% trans "Contact" %}
-                    </a>
+                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                    {% trans "Contact" %}
                 </p>
             </div>
             <div class="file">
                 <p>
-                    <a href="{% url 'home' %}">
-                        <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                        {% trans "Language selection" %}
-                    </a>
+                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                    {% trans "Language selection" %}
                 </p>
             </div>
             {% block windows %}{% endblock %}

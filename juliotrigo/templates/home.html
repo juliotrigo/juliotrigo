@@ -6,25 +6,19 @@
 {% block windows %}
     <section class="window" id="work">
         <h1>
-            <a href="{% url 'home' %}">
-                <img src="{{ close_button }}" alt="close" height="17" width="17">
-            </a>
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
         <div class="file align-left">
             <p>
-                <a href="{% url 'home' %}">
-                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                    Cesser
-                </a>
+                <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                Cesser
             </p>
         </div>
         <div class="file align-left">
             <p>
-                <a href="{% url 'home' %}">
-                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                    Webfusion
-                </a>
+                <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                Webfusion
             </p>
         </div>
     </section>
