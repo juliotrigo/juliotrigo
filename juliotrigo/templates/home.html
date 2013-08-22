@@ -5,7 +5,7 @@
 
 {% block windows %}
     <section class="window" id="work">
-        <h1>
+        <h1 onMouseDown="mouse_down('work')">
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
@@ -19,6 +19,25 @@
             <p>
                 <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
                 Webfusion
+            </p>
+        </div>
+    </section>
+    
+    <section class="window" id="projects">
+        <h1 onMouseDown="mouse_down('projects')">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
+            {% trans "Projects" %}
+        </h1>
+        <div class="file align-left">
+            <p>
+                <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                juliotrigo
+            </p>
+        </div>
+        <div class="file align-left">
+            <p>
+                <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
+                RESTfulWebAPI
             </p>
         </div>
     </section>

@@ -114,6 +114,12 @@ section.window > h1 > img {
 
 #work {
     visibility: hidden;
+    z-index: 1;
+}
+
+#projects {
+    visibility: hidden;
+    z-index: 2;
 }
 
 /********** FOOTER **********/
@@ -125,7 +131,7 @@ footer#bottom-bar {
     left: 0px;
     padding: 0px;
     margin: 0px;
-    z-index: 1000;
+    z-index: 10000;
     
     height: 65px;
     background: #deeeff;

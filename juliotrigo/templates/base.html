@@ -15,23 +15,16 @@
 {% static "img/desktop/folder-icon-512x512.png" as folder_desktop %}
 {% static "img/logos/firefox_logo-only_RGB.png" as firefox_logo %}
 {% static "img/red-close-button.png" as close_button %}
+{% static "js/windows.js" as windows_js %}
 
 <html lang="{{ LANGUAGE_CODE }}">
     <head>
         <meta charset="UTF-8">
         <title>juliotrigo - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
-        <script>
-        	function showstuff(boxid){
-        	   document.getElementById(boxid).style.visibility="visible";
-        	}
-        	 
-        	function hidestuff(boxid){
-        	   document.getElementById(boxid).style.visibility="hidden";
-        	}
-        </script>
+        <script src="{{ windows_js }}" type='text/javascript'></script>
     </head>
-    <body>
+    <body onMouseMove="getMouseInfo(event)" onMouseUp="mouse_up()">
         <div id="content-wrapper">
             <div id="logo">
                 <img src="{{ juliotrigo_big_logo }}" alt="juliotrigo" height="100" width="400">
@@ -54,13 +47,13 @@
                     </div>
                 </form>
             </div>
-            <div class="file" onclick="showstuff('work');">
+            <div class="file" ondblclick="showstuff('work');">
                 <p>
                     <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
                     {% trans "Work" %}
                 </p>
             </div>
-            <div class="file">
+            <div class="file" ondblclick="showstuff('projects');">
                 <p>
                     <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
                     {% trans "Projects" %}
