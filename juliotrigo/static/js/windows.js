@@ -6,6 +6,12 @@ function hidestuff(boxid){
     document.getElementById(boxid).style.visibility="hidden";
 }
 
+/*
+
+//<body onMouseMove="getMouseInfo(event)" onMouseUp="mouse_up()">
+//<h1 onMouseDown="mouse_down('work')">
+//<h1 onMouseDown="mouse_down('projects')">
+
 var x = 0;
 var y = 0;
 var element = '';
@@ -54,3 +60,4 @@ function mouse_up() {
     clicked = false;
     element = '';
 }
+*/

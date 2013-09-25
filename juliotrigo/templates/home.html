@@ -4,8 +4,8 @@
 {% block title %}{% trans "Home" %}{% endblock %}
 
 {% block windows %}
-    <section class="window" id="work">
-        <h1 onMouseDown="mouse_down('work')">
+    <section class="window" id="work" draggable="true">
+        <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
@@ -23,8 +23,8 @@
         </div>
     </section>
     
-    <section class="window" id="projects">
-        <h1 onMouseDown="mouse_down('projects')">
+    <section class="window" id="projects" draggable="true">
+        <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
             {% trans "Projects" %}
         </h1>
