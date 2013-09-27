@@ -72,8 +72,8 @@ a:hover {
 
 .window {
     position: absolute;
-    top: 35%;
-    left: 20%;
+    /*top: 35%;
+    left: 20%;*/  /* For Google Chrome */
     width: 350px;
     height: 250px;
     margin: 0px;
@@ -115,11 +115,15 @@ section.window > h1 > img {
 #work {
     visibility: hidden;
     z-index: 1;
+    top: 0;  /* For Google Chrome */
+    left: 0;
 }
 
 #projects {
     visibility: hidden;
     z-index: 2;
+    top: 0;  /* For Google Chrome */
+    left: 0;
 }
 
 /********** FOOTER **********/
