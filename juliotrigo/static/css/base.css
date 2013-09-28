@@ -8,11 +8,13 @@ html, body, ol, ul {
 html {
     font-family: Tahoma, Arial, sans-serif;
     background-color: #0d83dd;
+    overflow: hidden;
 }
 
 body {
     background-color: #0d83dd;
     color: white;
+    overflow: hidden;
 }
 
 li
@@ -135,7 +137,7 @@ footer#bottom-bar {
     left: 0px;
     padding: 0px;
     margin: 0px;
-    z-index: 10000;
+    z-index: 99999;
     
     height: 65px;
     background: #deeeff;

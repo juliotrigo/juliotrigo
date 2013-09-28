@@ -1,63 +1,54 @@
-function showstuff(boxid){
-    document.getElementById(boxid).style.visibility="visible";
-}
- 
-function hidestuff(boxid){
-    document.getElementById(boxid).style.visibility="hidden";
-}
+"use strict";
 
-/*
+/*jslint browser: true*/
+/*jshint browser: true, globalstrict: true*/
 
-//<body onMouseMove="getMouseInfo(event)" onMouseUp="mouse_up()">
-//<h1 onMouseDown="mouse_down('work')">
-//<h1 onMouseDown="mouse_down('projects')">
+/**
+ * z-index of the latest selected window.
+ */
+var zIndex_global = 100;
 
-var x = 0;
-var y = 0;
-var element = '';
-var being_dragged = false;
-var clicked = false;
-var Xoffset = 0;
-var Yoffset = 0;
-
-function getMouseInfo(event){
-    //x = event.clientX;
-    //y = event.clientY;
-	
-	if(event.offsetX || event.offsetY) {
-		x = event.offsetX - Xoffset;
-		y = event.offsetY - Yoffset;
-	}
-	else {
-		x = event.pageX - Xoffset;
-		y = event.pageY -Yoffset;
-	}
-	
-	if(clicked == true) {
-		
-		
-		document.getElementById(element).style.top = y +'px';
-		document.getElementById(element).style.left = x +'px';
-	}	
+/**
+ * Increments the global z-index.
+ */
+function incrementZIndex() {
+    zIndex_global += 1;
 }
 
-function mouse_down(id) {	
-	var obj = document.getElementById(id);
-    var topVal = parseInt(window.getComputedStyle(obj).top, 10);
-    var leftVal = parseInt(window.getComputedStyle(obj).left, 10);
-
-    Xoffset = x - leftVal;
-    Yoffset = y - topVal;
-    
-    clicked = true;
-    element = id;
+/**
+ * Returns the global z-index variable.
+ * @returns {Number}
+ */
+function getZIndex() {
+    return zIndex_global;
 }
 
-function mouse_up() {
-    Xoffset = 0;
-    Yoffset = 0;
-	
-    clicked = false;
-    element = '';
+/**
+ * Selects the window and puts it on the front.
+ * @param windowId
+ */
+function selectWindow(windowId) {
+    incrementZIndex();
+    document.getElementById(windowId).style.zIndex = getZIndex();
 }
-*/
+
+/**
+ * Shows the selected window.
+ * @param windowId
+ */
+function showstuff(windowId) {
+    selectWindow(windowId);
+    document.getElementById(windowId).style.visibility = "visible";
+}
+
+/**
+ * Hides the selected window.
+ * @param windowId
+ */
+function hidestuff(windowId) {
+    document.getElementById(windowId).style.visibility = "hidden";
+}
+
+// No scroll
+document.documentElement.style.overflow = 'hidden';
+document.body.scroll = "no";
