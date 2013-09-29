@@ -59,10 +59,21 @@ a:hover {
     border-radius: 0px 0px 10px 10px;
 }
 
+.column {
+    margin: 0px;
+    padding: 0px;
+}
+
+#second-column {
+    position: absolute;
+    top: 0px;
+    left: 85px;
+}
+
 .file {
     margin: 20px 20px 0px 20px;
     padding: 0px;
-    width: 55px;
+    width: 45px;
     cursor: pointer;
 }
 
@@ -139,21 +150,21 @@ footer#bottom-bar {
     margin: 0px;
     z-index: 99999;
     
-    height: 65px;
+    height: 55px;
     background: #deeeff;
 }
 
 footer#bottom-bar li {
     padding: 5px 5px 5px 5px;
     margin: 0px;
-    width: 65px;
+    width: 55px;
     
     text-align: center;
 }
 
 footer#bottom-bar li p {
     margin: 0px;
-    padding: 15px 0px 15px 0px;
+    padding: 10px 0px 10px 0px;
     height: 25px;
     
     color: black;

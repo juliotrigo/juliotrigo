@@ -7,13 +7,15 @@
 
 {% load static from staticfiles %}
 {% static "css/base.css" as base_css %}
-{% static "img/logos/twitter-bird-light-bgs.png" as twitter_logo %}
+{% static "img/logos/Twitter.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
-{% static "img/logos/LinkedIn_Logo60px.png" as linkedin_logo %}
-{% static "img/logos/jt.png" as jt_logo %}
+{% static "img/logos/LinkedIn.png" as linkedin_logo %}
+{% static "img/logos/logo45.png" as jt_logo_bar %}
+{% static "img/logos/logo32.png" as jt_logo_icon %}
 {% static "img/logos/juliotrigo_big.png" as juliotrigo_big_logo %}
-{% static "img/desktop/folder-icon-512x512.png" as folder_desktop %}
-{% static "img/logos/firefox_logo-only_RGB.png" as firefox_logo %}
+{% static "img/logos/Firefox.png" as firefox_logo %}
+{% static "img/logos/Chromium.png" as chromium_logo %}
+{% static "img/desktop/folder.png" as folder_desktop %}
 {% static "img/red-close-button.png" as close_button %}
 {% static "js/windows.js" as windows_js %}
 {% static "js/modernizr-2.6.2.js" as modernizr_js %}
@@ -24,6 +26,7 @@
         <meta charset="UTF-8">
         <title>juliotrigo - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
+        <link rel="shortcut icon" href="{{ jt_logo_icon }}" />
         <script src="{{ modernizr_js }}"></script>
     </head>
     <body>
@@ -49,53 +52,71 @@
                     </div>
                 </form>
             </div>
-            <div class="file" ondblclick="showstuff('work');">
-                <p>
-                    <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
-                    {% trans "Work" %}
-                </p>
+            <div id="first-column" class="column">
+                <div class="file" ondblclick="showstuff('work');">
+                    <p>
+                        <img src="{{ folder_desktop }}" alt="Work">
+                        {% trans "Work" %}
+                    </p>
+                </div>
+                <div class="file" ondblclick="showstuff('projects');">
+                    <p>
+                        <img src="{{ folder_desktop }}" alt="Projects">
+                        {% trans "Projects" %}
+                    </p>
+                </div>
+                <div class="file">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="About">
+                        {% trans "About" %}
+                    </p>
+                </div>
+                <div class="file">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="Contact">
+                        {% trans "Contact" %}
+                    </p>
+                </div>
             </div>
-            <div class="file" ondblclick="showstuff('projects');">
-                <p>
-                    <img src="{{ folder_desktop }}" alt="juliotrigo" height="55" width="55">
-                    {% trans "Projects" %}
-                </p>
+            <div id="second-column" class="column">
+                <div class="file">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="README">
+                        {% trans "README" %}
+                    </p>
+                </div>
+                <div class="file">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="License">
+                        {% trans "Copyright-License" %}
+                    </p>
+                </div>
             </div>
-            <div class="file">
-                <p>
-                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                    {% trans "Contact" %}
-                </p>
-            </div>
-            <div class="file">
-                <p>
-                    <img src="{{ firefox_logo }}" alt="juliotrigo" height="52" width="55">
-                    {% trans "Language selection" %}
-                </p>
-            </div>
+            
             {% block windows %}{% endblock %}
+            
         </div>
         <footer id="bottom-bar">
             <div>
                 <ul>
                     <li class="align-left">
                         <a href="{% url 'home' %}">
-                            <img src="{{ jt_logo }}" alt="juliotrigo" height="55" width="55">
+                            <img src="{{ jt_logo_bar }}" alt="juliotrigo">
                         </a>
                     </li>
                     <li class="align-left border-left">
                         <a href="https://github.com/juliotrigo">
-                            <img src="{{ github_logo }}" alt="GitHub" height="55" width="66">
+                            <img src="{{ github_logo }}" alt="GitHub">
                         </a>
                     </li>
                     <li class="align-left">
                         <a href="http://uk.linkedin.com/in/juliotrigo/en">
-                            <img src="{{ linkedin_logo }}" alt="LinkedIn" height="50" width="60">
+                            <img src="{{ linkedin_logo }}" alt="LinkedIn">
                         </a>
                     </li>
                     <li class="align-left">
                         <a href="https://twitter.com/juliotrigo">
-                            <img src="{{ twitter_logo }}" alt="Twitter" height="55" width="55">
+                            <img src="{{ twitter_logo }}" alt="Twitter">
                         </a>
                     </li>
                     <li class="align-right">
