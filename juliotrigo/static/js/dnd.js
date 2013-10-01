@@ -8,6 +8,7 @@
  */
 var work = document.getElementById('work');
 var projects = document.getElementById('projects');
+var license = document.getElementById('license');
 var wrapper = document.getElementById('content-wrapper');
 
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
@@ -15,6 +16,8 @@ work.style.top = '220px';
 work.style.left = '200px';
 projects.style.top = '320px';
 projects.style.left = '600px';
+license.style.top = '100px';
+license.style.left = '100px';
 
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
@@ -106,6 +109,10 @@ if (Modernizr.draganddrop) {
     projects.addEventListener('dragstart', handleDragStart, false);
     //projects.addEventListener('drag', handleDrag, false);
     projects.addEventListener('dragend', handleDragEnd, false);
+
+    license.addEventListener('dragstart', handleDragStart, false);
+    //license.addEventListener('drag', handleDrag, false);
+    license.addEventListener('dragend', handleDragEnd, false);
 
     document.body.addEventListener('dragenter', handleDragEnter, false);
     //wrapper.addEventListener('dragleave', handleDragLeave, false);

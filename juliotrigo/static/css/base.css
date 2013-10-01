@@ -1,5 +1,32 @@
 @charset "UTF-8";
 
+/*------------------------------------------------------------------
+[Layout]
+
+* body
+    + Content / div#content-wrapper
+        - Logo / div#logo
+        - First Column / .column#first-column
+            - Files / .file
+        - Second Column / .column#second-column
+            - Files / .file
+        - Window / .window .folder #work
+            - Header / h1
+            - Files / .file
+        - Window / .window .folder #projects
+            - Header / h1
+            - Files / .file
+        - Window / .window .browser #license
+            - Header / h1
+            - Text / p
+    + Footer / footer#bottom-bar
+    
+-------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------*/
+/*---------------------------- GLOBAL ----------------------------*/
+/*-----------------------------------------------------------------*/
+
 html, body, ol, ul {
     margin: 0px;
     padding: 0px;
@@ -30,7 +57,9 @@ a:hover {
     text-decoration: none;
 }
 
-/********** CONTENT **********/
+/*-----------------------------------------------------------------*/
+/*---------------------------- CONTENT ----------------------------*/
+/*-----------------------------------------------------------------*/
 
 #content-wrapper {
     margin: 0px 0px 85px 0px;
@@ -59,6 +88,8 @@ a:hover {
     border-radius: 0px 0px 10px 10px;
 }
 
+/*---------------------------- Columns ----------------------------*/
+
 .column {
     margin: 0px;
     padding: 0px;
@@ -83,12 +114,16 @@ a:hover {
     text-align: center;
 }
 
+#content-wrapper > .column > .file > p {
+    color: white;
+}
+
+/*---------------------------- Windows ----------------------------*/
+
 .window {
     position: absolute;
     /*top: 35%;
     left: 20%;*/  /* For Google Chrome */
-    width: 350px;
-    height: 250px;
     margin: 0px;
     padding: 0px;
     border-radius: 7px 7px 2px 2px;
@@ -98,14 +133,18 @@ a:hover {
     background-image: linear-gradient(0deg, #535565, white 3%);
     /*background-image: linear-gradient(90deg, #535565, white 2%);*/
     /*background-image: linear-gradient(-90deg, #535565, white 2%);*/
+    
+    /*overflow: scroll;*/
 }
 
-#content-wrapper > .file > p {
-    color: white;
+.folder {
+    width: 350px;
+    height: 250px;
 }
 
-section.window > .file > p {
-    color: black;
+.browser {
+    width: 50%;
+    height: 70%;
 }
 
 section.window > h1 {
@@ -125,6 +164,18 @@ section.window > h1 > img {
     cursor: pointer;
 }
 
+
+section.window > .file > p {
+    color: black;  /* Folder window */
+}
+
+section.window > p, section.window > h2 {
+    color: black;  /* Browser window */
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
 #work {
     visibility: hidden;
     z-index: 1;
@@ -139,7 +190,16 @@ section.window > h1 > img {
     left: 0;
 }
 
-/********** FOOTER **********/
+#license {
+    visibility: hidden;
+    z-index: 3;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
+/*-----------------------------------------------------------------*/
+/*---------------------------- FOOTER -----------------------------*/
+/*-----------------------------------------------------------------*/
 
 footer#bottom-bar {
     position: fixed;
