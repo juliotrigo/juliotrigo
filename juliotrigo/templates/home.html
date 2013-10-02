@@ -4,58 +4,64 @@
 {% block title %}{% trans "Home" %}{% endblock %}
 
 {% block windows %}
-    <section id="work" class="window folder" draggable="true" onclick="selectWindow('work')">
+    <section id="work" class="window" draggable="true" onclick="selectWindow('work')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
-        <div class="file align-left">
-            <p>
-                <img src="{{ chromium_logo }}" alt="Cesser">
-                Cesser
-            </p>
-        </div>
-        <div class="file align-left">
-            <p>
-                <img src="{{ chromium_logo }}" alt="Webfusion">
-                Webfusion
-            </p>
+        <div class="folder-content">
+            <div class="file align-left">
+                <p>
+                    <img src="{{ chromium_logo }}" alt="Cesser">
+                    Cesser
+                </p>
+            </div>
+            <div class="file align-left">
+                <p>
+                    <img src="{{ chromium_logo }}" alt="Webfusion">
+                    Webfusion
+                </p>
+            </div>
         </div>
     </section>
-    <section id="projects" class="window folder" draggable="true" onclick="selectWindow('projects')">
+    <section id="projects" class="window" draggable="true" onclick="selectWindow('projects')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
             {% trans "Projects" %}
         </h1>
-        <div class="file align-left">
-            <p>
-                <img src="{{ chromium_logo }}" alt="juliotrigo">
-                juliotrigo
-            </p>
-        </div>
-        <div class="file align-left">
-            <p>
-                <img src="{{ chromium_logo }}" alt="RESTfulWebAPI">
-                RESTfulWebAPI
-            </p>
+        <div class="folder-content">
+            <div class="file align-left">
+                <p>
+                    <img src="{{ chromium_logo }}" alt="juliotrigo">
+                    juliotrigo
+                </p>
+            </div>
+            <div class="file align-left">
+                <p>
+                    <img src="{{ chromium_logo }}" alt="RESTfulWebAPI">
+                    RESTfulWebAPI
+                </p>
+            </div>
         </div>
     </section>
-    <section id="license" class="window browser" draggable="true" onclick="selectWindow('license')">
+    <section id="license" class="window" draggable="true" onclick="selectWindow('license')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('license');">
             {% trans "Projects" %}
         </h1>
-        <h2>Copyright</h2>
-        <p>Copyright &copy; 2013 Julio Vicente Trigo Guijarro</p>
-        <p>
-            <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB">
-                <img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
-            </a>
-        </p>
-        <p>Except where otherwise noted, content on this site by <a href="http://juliotrigo.com" property="http://creativecommons.org/ns#attributionName" rel="http://creativecommons.org/ns#attributionURL">Julio Vicente Trigo Guijarro</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB">Creative Commons Attribution 3.0 Unported License</a>.</p>
-        <p>A <a href="http://creativecommons.org/licenses/by/3.0/">summary</a> of the terms of this license is available, as well as its <a href="http://creativecommons.org/licenses/by/3.0/legalcode">detailed terms.</a></p>
-        <p>The rights in the trademarks, logos, service marks of juliotrigo, as well as the look and feel of this web site, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms.</p>
-        <h2>Trademark</h2>
-        <p>juliotrigo and the juliotrigo logo are trademarks of Julio Vicente Trigo Guijarro.</p>
+        <div class="browser-content">
+            <h2>Copyright</h2>
+            <p>Copyright &copy; 2013 Julio Vicente Trigo Guijarro</p>
+            <p>
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB">
+                    <img alt="Creative Commons Licence" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
+                </a>
+            </p>
+            <p>Except where otherwise noted, content on this site by <a href="http://juliotrigo.com" property="http://creativecommons.org/ns#attributionName" rel="http://creativecommons.org/ns#attributionURL">Julio Vicente Trigo Guijarro</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_GB">Creative Commons Attribution 3.0 Unported License</a>.</p>
+            <p>A <a href="http://creativecommons.org/licenses/by/3.0/">summary</a> of the terms of this license is available, as well as its <a href="http://creativecommons.org/licenses/by/3.0/legalcode">detailed terms.</a></p>
+            <p>The rights in the trademarks, logos, service marks of juliotrigo, as well as the look and feel of this web site, are not licensed under the Creative Commons license, and to the extent they are works of authorship (like logos and graphic design), they are not included in the work that is licensed under those terms.</p>
+            <h2>Trademark</h2>
+            <p>juliotrigo and the juliotrigo logo are trademarks of Julio Vicente Trigo Guijarro.</p>
+        </div>
     </section>
 {% endblock %}

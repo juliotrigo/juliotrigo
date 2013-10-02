@@ -10,15 +10,15 @@
             - Files / .file
         - Second Column / .column#second-column
             - Files / .file
-        - Window / .window .folder #work
+        - Window / .window #work
             - Header / h1
-            - Files / .file
-        - Window / .window .folder #projects
+            - Files / .folder-content .file
+        - Window / .window #projects
             - Header / h1
-            - Files / .file
-        - Window / .window .browser #license
+            - Files / .folder-content .file
+        - Window / .window #license
             - Header / h1
-            - Text / p
+            - Text / .browser-content
     + Footer / footer#bottom-bar
     
 -------------------------------------------------------------------*/
@@ -133,18 +133,20 @@ a:hover {
     background-image: linear-gradient(0deg, #535565, white 3%);
     /*background-image: linear-gradient(90deg, #535565, white 2%);*/
     /*background-image: linear-gradient(-90deg, #535565, white 2%);*/
-    
-    /*overflow: scroll;*/
 }
 
-.folder {
+.folder-content {
     width: 350px;
     height: 250px;
+    
+    overflow: auto;  /* scroll if necessary */
 }
 
-.browser {
-    width: 50%;
-    height: 70%;
+.browser-content {
+    width: 650px;
+    height: 450px;
+    
+    overflow: auto;  /* scroll if necessary */
 }
 
 section.window > h1 {
@@ -164,16 +166,14 @@ section.window > h1 > img {
     cursor: pointer;
 }
 
-
-section.window > .file > p {
-    color: black;  /* Folder window */
+.folder-content > .file > p {
+    color: black;
 }
 
-section.window > p, section.window > h2 {
-    color: black;  /* Browser window */
+.browser-content > h2, .browser-content > p {
     margin-left: 20px;
     margin-right: 20px;
-    
+    color: black;
 }
 
 #work {
