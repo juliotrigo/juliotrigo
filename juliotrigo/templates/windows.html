@@ -2,30 +2,30 @@
 {% load i18n %}
 
 {% block windows %}
-    <section id="work" class="window" draggable="true" onclick="selectWindow('work')">
+    <section id="work" class="window" draggable="true" onclick="selectWindow('work')" onmousedown="selectWindow('work')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
-        <div class="folder-content">
+        <div class="window-content folder-content">
             {% block work %}{% endblock %}
         </div>
     </section>
-    <section id="projects" class="window" draggable="true" onclick="selectWindow('projects')">
+    <section id="projects" class="window" draggable="true" onclick="selectWindow('projects')" onmousedown="selectWindow('projects')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
             {% trans "Projects" %}
         </h1>
-        <div class="folder-content">
+        <div class="window-content folder-content">
             {% block projects %}{% endblock %}
         </div>
     </section>
-    <section id="license" class="window" draggable="true" onclick="selectWindow('license')">
+    <section id="license" class="window" draggable="true" onclick="selectWindow('license')" onmousedown="selectWindow('license')">
         <h1>
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('license');">
             {% trans "License - Mozilla Firefox" %}
         </h1>
-        <div class="browser-content">
+        <div class="window-content browser-content">
             {% block license %}{% endblock %}
         </div>
     </section>

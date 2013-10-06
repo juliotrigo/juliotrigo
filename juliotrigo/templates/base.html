@@ -7,12 +7,13 @@
 
 {% load static from staticfiles %}
 {% static "css/base.css" as base_css %}
+{% static "img/logos/logo45.png" as jt_logo_bar %}
+{% static "img/logos/logo32.png" as jt_logo_icon %}
+{% static "img/logos/logo_juliotrigo.png" as juliotrigo_logo %}
+{% static "img/logos/logo_watermark.png" as watermark_logo %}
 {% static "img/logos/Twitter.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
 {% static "img/logos/LinkedIn.png" as linkedin_logo %}
-{% static "img/logos/logo45.png" as jt_logo_bar %}
-{% static "img/logos/logo32.png" as jt_logo_icon %}
-{% static "img/logos/juliotrigo_big.png" as juliotrigo_big_logo %}
 {% static "img/logos/Firefox.png" as firefox_logo %}
 {% static "img/logos/Chromium.png" as chromium_logo %}
 {% static "img/desktop/folder.png" as folder_desktop %}
@@ -32,8 +33,12 @@
     <body>
         <div id="content-wrapper">
             <div id="logo">
-                <img src="{{ juliotrigo_big_logo }}" alt="juliotrigo" height="100" width="400">
+                <img src="{{ juliotrigo_logo }}" alt="Logo juliotrigo" height="50" width="200">
             </div>
+            <div id="watermark">
+                <img src="{{ watermark_logo }}" alt="Logo JT watermark" height="520" width="431">
+            </div>
+            <!--
             <div id="language-selection">
                 <form action="{% url 'set_language' %}" method="post">
                     <div>
@@ -52,6 +57,7 @@
                     </div>
                 </form>
             </div>
+            -->
             <div id="first-column" class="column">
                 <div class="file" ondblclick="showstuff('work');">
                     <p>
@@ -88,7 +94,7 @@
                 <div class="file" ondblclick="showstuff('license');">
                     <p>
                         <img src="{{ firefox_logo }}" alt="License">
-                        {% trans "Copyright-License" %}
+                        {% trans "License" %}
                     </p>
                 </div>
             </div>
