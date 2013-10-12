@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+/**
+ * 'Source Sans Pro', 'PT Sans', 'Lato'
+ * 'Open Sans', 'Noto Sans', 'Ubuntu'
+ * 'Helvetica Neue', 'Tahoma'
+ * 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', 'Georgia', 'Trebuchet MS', 'Segoe UI', Tangerine
+ * Verdana, Helvetica, Arial, sans-serif
+ * 
+*/
+
+/**
+ * 'Source Sans Pro'
+ */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+/**
+ * 'PT Sans'
+ */
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+
+/**
+ * 'Lato'
+ */
+@import url(http://fonts.googleapis.com/css?family=Lato);
