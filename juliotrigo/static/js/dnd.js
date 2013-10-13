@@ -8,7 +8,10 @@
  */
 var work = document.getElementById('work');
 var projects = document.getElementById('projects');
+var readme = document.getElementById('readme');
 var license = document.getElementById('license');
+var about = document.getElementById('about');
+var contact = document.getElementById('contact');
 var wrapper = document.getElementById('content-wrapper');
 
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
@@ -16,8 +19,14 @@ work.style.top = '220px';
 work.style.left = '200px';
 projects.style.top = '320px';
 projects.style.left = '600px';
+readme.style.top = '100px';
+readme.style.left = '100px';
 license.style.top = '100px';
 license.style.left = '100px';
+about.style.top = '100px';
+about.style.left = '100px';
+contact.style.top = '100px';
+contact.style.left = '100px';
 
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
@@ -26,10 +35,11 @@ var PLAIN_DRAG_TYPE = 'text/plain';
  * dragstart
  */
 function handleDragStart(event) {
-    var style, offset;
+    var style, offset, elementID;
 
+    elementID = event.target.id;
     style = window.getComputedStyle(event.target, null);
-    offset = event.target.id + ',' + (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY);
+    offset = elementID + ',' + (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY);
 
     event.dataTransfer.setData(PLAIN_DRAG_TYPE, offset);
     event.dataTransfer.effectAllowed = 'move';
@@ -110,9 +120,21 @@ if (Modernizr.draganddrop) {
     //projects.addEventListener('drag', handleDrag, false);
     projects.addEventListener('dragend', handleDragEnd, false);
 
+    readme.addEventListener('dragstart', handleDragStart, false);
+    //readme.addEventListener('drag', handleDrag, false);
+    readme.addEventListener('dragend', handleDragEnd, false);
+
     license.addEventListener('dragstart', handleDragStart, false);
     //license.addEventListener('drag', handleDrag, false);
     license.addEventListener('dragend', handleDragEnd, false);
+
+    about.addEventListener('dragstart', handleDragStart, false);
+    //about.addEventListener('drag', handleDrag, false);
+    about.addEventListener('dragend', handleDragEnd, false);
+
+    contact.addEventListener('dragstart', handleDragStart, false);
+    //contact.addEventListener('drag', handleDrag, false);
+    contact.addEventListener('dragend', handleDragEnd, false);
 
     document.body.addEventListener('dragenter', handleDragEnter, false);
     //wrapper.addEventListener('dragleave', handleDragLeave, false);

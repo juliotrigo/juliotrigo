@@ -78,15 +78,43 @@ a:hover {
 
 #watermark {
     position: absolute;
-    top: 5%;  /* bottom: 35 */
-    left: 18%;  /* 43 */
-    width: 431px;  /* 160 481 */
-    height: 520px;  /* 193 580 */
+    top: 5%;  /* 15 */
+    right: 33%;  /* 43 40%:36 */
+    width: 267px;  /* 481 431 53%:160 40%:267 */
+    height: 322px;  /* 193 580 520 53%:193 40%:322  */
     padding: 0px;
     margin: 0px;
     text-align: center;
 }
 
+#motto {
+    position: absolute;
+    top: 5%;  /* 15 */
+    right: 3%;
+    width: 30%;
+    height: 50%;
+    padding: 0px;
+    margin: 0px;
+    
+    font-family: 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
+    text-align: right;
+    
+    color: #deeeff;
+    /*background-color: #5e8bff;*/  /* TODO */
+}
+
+#motto > h1 {
+    padding: 0px;
+    margin: 0px;
+    
+    font-size: 2.4em;
+}
+
+#motto > p {
+    font-size: 1.8em;
+}
+
+/* TODO */
 #language-selection {
     position: absolute;
     top: 0px;
@@ -172,19 +200,19 @@ a:hover {
     height: 450px;
 }
 
-section.window > h1 {
+.window > h1 {
     margin: 0px;
     padding: 5px;
     border-radius: 7px 7px 0px 0px;
     
-    font-size: 1.0em;
+    font-size: 1.1em;
     font-style: normal;
     font-weight: normal;    
     color: white;
     background-color: #535565; /* #535565 #4B4D5C */
 }
 
-section.window > h1 > img {
+.window > h1 > img {
     margin: 0px 10px 0px 0px;
     cursor: pointer;
 }
@@ -217,9 +245,30 @@ section.window > h1 > img {
     left: 0;
 }
 
-#license {
+#readme {
     visibility: hidden;
     z-index: 3;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
+#license {
+    visibility: hidden;
+    z-index: 4;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
+#about {
+    visibility: hidden;
+    z-index: 5;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
+#contact {
+    visibility: hidden;
+    z-index: 6;
     top: 0;  /* For Google Chrome */
     left: 0;
 }

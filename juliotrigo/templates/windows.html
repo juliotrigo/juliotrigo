@@ -7,7 +7,7 @@
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
             {% trans "Work" %}
         </h1>
-        <div class="window-content folder-content">
+        <div class="window-content folder-content" draggable="false">
             {% block work %}{% endblock %}
         </div>
     </section>
@@ -16,8 +16,17 @@
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
             {% trans "Projects" %}
         </h1>
-        <div class="window-content folder-content">
+        <div class="window-content folder-content" draggable="false">
             {% block projects %}{% endblock %}
+        </div>
+    </section>
+    <section id="readme" class="window" draggable="true" onclick="selectWindow('readme')" onmousedown="selectWindow('readme')">
+        <h1>
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('readme');">
+            {% trans "README" %}
+        </h1>
+        <div class="window-content browser-content" draggable="false">
+            {% block readme %}{% endblock %}
         </div>
     </section>
     <section id="license" class="window" draggable="true" onclick="selectWindow('license')" onmousedown="selectWindow('license')">
@@ -25,8 +34,26 @@
             <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('license');">
             {% trans "License - Mozilla Firefox" %}
         </h1>
-        <div class="window-content browser-content">
+        <div class="window-content browser-content" draggable="false">
             {% block license %}{% endblock %}
+        </div>
+    </section>
+    <section id="about" class="window" draggable="true" onclick="selectWindow('about')" onmousedown="selectWindow('about')">
+        <h1>
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('about');">
+            {% trans "About - Mozilla Firefox" %}
+        </h1>
+        <div class="window-content browser-content" draggable="false">
+            {% block about %}{% endblock %}
+        </div>
+    </section>
+    <section id="contact" class="window" draggable="true" onclick="selectWindow('contact')" onmousedown="selectWindow('contact')">
+        <h1>
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('contact');">
+            {% trans "Contact - Mozilla Firefox" %}
+        </h1>
+        <div class="window-content browser-content" draggable="false">
+            {% block contact %}{% endblock %}
         </div>
     </section>
 {% endblock %}

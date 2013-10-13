@@ -17,6 +17,9 @@
 {% static "img/logos/LinkedIn.png" as linkedin_logo %}
 {% static "img/logos/Firefox.png" as firefox_logo %}
 {% static "img/logos/Chromium.png" as chromium_logo %}
+{% static "img/logos/Django.gif" as django_logo %}
+{% static "img/logos/Python.png" as python_logo %}
+{% static "img/logos/HTML5.png" as html5_logo %}
 {% static "img/desktop/folder.png" as folder_desktop %}
 {% static "img/red-close-button.png" as close_button %}
 {% static "js/windows.js" as windows_js %}
@@ -26,7 +29,7 @@
 <html lang="{{ LANGUAGE_CODE }}" class="no-js">
     <head>
         <meta charset="UTF-8">
-        <title>juliotrigo - {% block title %}{% endblock %}</title>
+        <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{{ fonts_css }}" />
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
         <link rel="shortcut icon" href="{{ jt_logo_icon }}" />
@@ -34,12 +37,6 @@
     </head>
     <body>
         <div id="content-wrapper">
-            <div id="logo">
-                <img src="{{ juliotrigo_logo }}" alt="Logo juliotrigo" height="50" width="200">
-            </div>
-            <div id="watermark">
-                <img src="{{ watermark_logo }}" alt="Logo JT watermark" height="520" width="431">
-            </div>
             <!--
             <div id="language-selection">
                 <form action="{% url 'set_language' %}" method="post">
@@ -60,6 +57,16 @@
                 </form>
             </div>
             -->
+            <div id="logo">
+                <img src="{{ juliotrigo_logo }}" alt="Logo juliotrigo" height="50" width="200">
+            </div>
+            <div id="watermark">
+                <img src="{{ watermark_logo }}" alt="Logo JT watermark" height="322" width="267">
+            </div>
+            <div id="motto">
+                <h1>{% trans "Software Developer" %}</h1>
+                <p>{% trans "Python, Django, REST, BDD, HTML, CSS, Linux, ERP, databases" %}</p>
+            </div>
             <div id="first-column" class="column">
                 <div class="file" ondblclick="showstuff('work');">
                     <p>
@@ -73,21 +80,7 @@
                         {% trans "Projects" %}
                     </p>
                 </div>
-                <div class="file">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="About">
-                        {% trans "About" %}
-                    </p>
-                </div>
-                <div class="file">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="Contact">
-                        {% trans "Contact" %}
-                    </p>
-                </div>
-            </div>
-            <div id="second-column" class="column">
-                <div class="file">
+                <div class="file" ondblclick="showstuff('readme');">
                     <p>
                         <img src="{{ firefox_logo }}" alt="README">
                         {% trans "README" %}
@@ -95,14 +88,26 @@
                 </div>
                 <div class="file" ondblclick="showstuff('license');">
                     <p>
-                        <img src="{{ firefox_logo }}" alt="License">
-                        {% trans "License" %}
+                        <img src="{{ firefox_logo }}" alt="LICENSE">
+                        {% trans "LICENSE" %}
                     </p>
                 </div>
             </div>
-            
+            <div id="second-column" class="column">
+                <div class="file" ondblclick="showstuff('about');">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="About">
+                        {% trans "About" %}
+                    </p>
+                </div>
+                <div class="file" ondblclick="showstuff('contact');">
+                    <p>
+                        <img src="{{ firefox_logo }}" alt="Contact">
+                        {% trans "Contact" %}
+                    </p>
+                </div>
+            </div>
             {% block windows %}{% endblock %}
-            
         </div>
         <footer id="bottom-bar">
             <div>
@@ -132,6 +137,21 @@
                     </li>
                     <li class="align-right border-left">
                         <p>LAN</p>
+                    </li>
+                    <li class="align-right">
+                        <a href="http://www.djangoproject.com">
+                            <img src="{{ django_logo }}" alt="Django" height="19" width="45">
+                        </a>
+                    </li>
+                    <li class="align-right">
+                        <a href="http://www.python.org">
+                            <img src="{{ python_logo }}" alt="Python" height="45" width="35">
+                        </a>
+                    </li>
+                    <li class="align-right">
+                        <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
+                            <img src="{{ html5_logo }}" alt="HTML5" height="45" width="45">
+                        </a>
                     </li>
                 </ul>
             </div>
