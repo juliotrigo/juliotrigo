@@ -76,10 +76,32 @@ a:hover {
     text-align: center;
 }
 
+#name {
+    position: absolute;
+    bottom: 12%;
+    right: 3%;
+    width: 350px;
+    height: 110px;
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
+    text-align: right;
+    font-size: 4.4em;
+
+    color: #deeeff;
+}
+
+#name > h1, #name > p {
+    padding: 0px;
+    margin: 0px;
+
+}
+
 #watermark {
     position: absolute;
-    top: 5%;  /* 15 */
-    right: 33%;  /* 43 40%:36 */
+    top: 35px;  /* 15 5 */
+    right: 35px;  /* 43 40%:36 33 3 */
     width: 230px;  /* 481 431 53%:160 40%:267 35%:234 34%:227 */
     height: 277px;  /* 193 580 520 53%:193 40%:322 35%:281 34%:273 */
     padding: 0px;
@@ -89,16 +111,16 @@ a:hover {
 
 #motto {
     position: absolute;
-    top: 5%;  /* 15 */
-    right: 3%;
-    width: 30%;
-    height: 50%;
+    top: 35px;  /* 15 5 */
+    right: 300px;  /* 3 23 */
+    width: 400px;  /* 30% */
+    height: 300px;  /* 50% */
     padding: 0px;
     margin: 0px;
-    
+
     font-family: 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
     text-align: right;
-    
+
     color: #deeeff;
     /*background-color: #5e8bff;*/  /* TODO */
 }
@@ -106,7 +128,7 @@ a:hover {
 #motto > h1 {
     padding: 0px;
     margin: 0px;
-    
+
     font-size: 2.4em;
 }
 
@@ -171,7 +193,7 @@ a:hover {
 
 .window-content {
     overflow: auto;  /* scroll if necessary */
-    
+
     border-left: 1px solid rgb(207,207,207);
     border-right: 1px solid rgb(207,207,207);
     border-bottom: 1px solid rgb(207,207,207);
@@ -180,7 +202,7 @@ a:hover {
 .folder-content {
     width: 350px;
     height: 250px;
-    
+
     background-image: linear-gradient(bottom, rgb(207,207,207) 0%, rgb(255,255,255) 10%);
     background-image: -o-linear-gradient(bottom, rgb(207,207,207) 0%, rgb(255,255,255) 10%);
     background-image: -moz-linear-gradient(bottom, rgb(207,207,207) 0%, rgb(255,255,255) 10%);
@@ -204,10 +226,10 @@ a:hover {
     margin: 0px;
     padding: 5px;
     border-radius: 7px 7px 0px 0px;
-    
+
     font-size: 1.1em;
     font-style: normal;
-    font-weight: normal;    
+    font-weight: normal;
     color: white;
     background-color: #535565; /* #535565 #4B4D5C */
 }
@@ -285,7 +307,7 @@ footer#bottom-bar {
     padding: 0px;
     margin: 0px;
     z-index: 99999;
-    
+
     height: 55px;
     background: #deeeff;
 }
@@ -294,7 +316,7 @@ footer#bottom-bar li {
     padding: 5px 5px 5px 5px;
     margin: 0px;
     width: 55px;
-    
+
     text-align: center;
 }
 
@@ -302,7 +324,7 @@ footer#bottom-bar li p {
     margin: 0px;
     padding: 10px 0px 10px 0px;
     height: 25px;
-    
+
     color: black;
     text-align: center;
 }
