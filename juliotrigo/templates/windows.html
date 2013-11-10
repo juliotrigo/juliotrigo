@@ -2,54 +2,54 @@
 {% load i18n %}
 
 {% block windows %}
-    <section id="work" class="window" draggable="true" onclick="selectWindow('work')" onmousedown="selectWindow('work')">
+    <section id="work" class="window" draggable="true" onclick="appWindows.selectWindow('work')" onmousedown="appWindows.selectWindow('work')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('work');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('work', appWindows.folder.type);">
             {% trans "Work" %}
         </h1>
         <div class="window-content folder-content" draggable="false">
             {% block work %}{% endblock %}
         </div>
     </section>
-    <section id="projects" class="window" draggable="true" onclick="selectWindow('projects')" onmousedown="selectWindow('projects')">
+    <section id="projects" class="window" draggable="true" onclick="appWindows.selectWindow('projects')" onmousedown="appWindows.selectWindow('projects')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('projects');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('projects', appWindows.folder.type);">
             {% trans "Projects" %}
         </h1>
         <div class="window-content folder-content" draggable="false">
             {% block projects %}{% endblock %}
         </div>
     </section>
-    <section id="readme" class="window" draggable="true" onclick="selectWindow('readme')" onmousedown="selectWindow('readme')">
+    <section id="readme" class="window" draggable="true" onclick="appWindows.selectWindow('readme')" onmousedown="appWindows.selectWindow('readme')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('readme');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('readme', appWindows.txt.type);">
             {% trans "README" %}
         </h1>
         <div class="window-content browser-content" draggable="false">
             {% block readme %}{% endblock %}
         </div>
     </section>
-    <section id="license" class="window" draggable="true" onclick="selectWindow('license')" onmousedown="selectWindow('license')">
+    <section id="license" class="window" draggable="true" onclick="appWindows.selectWindow('license')" onmousedown="appWindows.selectWindow('license')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('license');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('license', appWindows.firefox.type);">
             {% trans "License - Mozilla Firefox" %}
         </h1>
         <div class="window-content browser-content" draggable="false">
             {% block license %}{% endblock %}
         </div>
     </section>
-    <section id="about" class="window" draggable="true" onclick="selectWindow('about')" onmousedown="selectWindow('about')">
+    <section id="about" class="window" draggable="true" onclick="appWindows.selectWindow('about')" onmousedown="appWindows.selectWindow('about')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('about');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('about', appWindows.firefox.type);">
             {% trans "About - Mozilla Firefox" %}
         </h1>
         <div class="window-content browser-content" draggable="false">
             {% block about %}{% endblock %}
         </div>
     </section>
-    <section id="contact" class="window" draggable="true" onclick="selectWindow('contact')" onmousedown="selectWindow('contact')">
+    <section id="contact" class="window" draggable="true" onclick="appWindows.selectWindow('contact')" onmousedown="appWindows.selectWindow('contact')">
         <h1>
-            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="hidestuff('contact');">
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('contact', appWindows.firefox.type);">
             {% trans "Contact - Mozilla Firefox" %}
         </h1>
         <div class="window-content browser-content" draggable="false">

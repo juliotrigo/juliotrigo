@@ -73,25 +73,25 @@
                 <p>{% trans "Julio Trigo" %}</p>
             </div>
             <div id="first-column" class="column">
-                <div class="file" ondblclick="showstuff('work');">
+                <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);">
                     <p>
                         <img src="{{ folder_desktop }}" alt="Work">
                         {% trans "Work" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="showstuff('projects');">
+                <div class="file" ondblclick="appWindows.showstuff('projects', appWindows.folder.type);">
                     <p>
                         <img src="{{ folder_desktop }}" alt="Projects">
                         {% trans "Projects" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="showstuff('readme');">
+                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
                     <p>
                         <img src="{{ firefox_logo }}" alt="README">
                         {% trans "README" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="showstuff('license');">
+                <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);">
                     <p>
                         <img src="{{ firefox_logo }}" alt="LICENSE">
                         {% trans "LICENSE" %}
@@ -99,18 +99,22 @@
                 </div>
             </div>
             <div id="second-column" class="column">
-                <div class="file" ondblclick="showstuff('about');">
+                <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);">
                     <p>
                         <img src="{{ firefox_logo }}" alt="About">
                         {% trans "About" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="showstuff('contact');">
+                <div class="file" ondblclick="appWindows.showstuff('contact', appWindows.firefox.type);">
                     <p>
                         <img src="{{ firefox_logo }}" alt="Contact">
                         {% trans "Contact" %}
                     </p>
                 </div>
+            </div>
+            <div id="language-bar">
+                <p>EN</p>
+                <p>ES</p>
             </div>
             {% block windows %}{% endblock %}
         </div>
@@ -137,11 +141,33 @@
                             <img src="{{ twitter_logo }}" alt="Twitter">
                         </a>
                     </li>
+
+                    <li class="align-left" id="bar_folder">
+                        <div>
+                            <img src="{{ folder_desktop }}" alt="Folder">
+                        </div>
+                    </li>
+                    <li class="align-left" id="bar_firefox">
+                        <div>
+                            <img src="{{ firefox_logo }}" alt="Firefox">
+                        </div>
+                    </li>
+                    <li class="align-left" id="bar_chromium">
+                        <div>
+                            <img src="{{ chromium_logo }}" alt="Chromium">
+                        </div>
+                    </li>
+                    <li class="align-left" id="bar_txt">
+                        <div>
+                            <img src="{{ firefox_logo }}" alt="Text">
+                        </div>
+                    </li>
+
                     <li class="align-right">
                         <p>{{ time }}</p>
                     </li>
                     <li class="align-right border-left">
-                        <p>LAN</p>
+                        <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
                     </li>
                     <li class="align-right">
                         <a href="http://www.python.org">

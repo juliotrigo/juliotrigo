@@ -301,12 +301,12 @@ a:hover {
 
 footer#bottom-bar {
     position: fixed;
+    z-index: 99999;
     width: 100%;
     bottom: 0px;
     left: 0px;
     padding: 0px;
     margin: 0px;
-    z-index: 99999;
 
     height: 55px;
     background: #deeeff;
@@ -339,4 +339,58 @@ footer#bottom-bar li p {
 
 .border-left {
     border-left: 2px solid #0d83dd;
+}
+
+/*------------------------ Dynamic bar icons ----------------------*/
+
+#bar_folder {
+    visibility: hidden;
+}
+
+#bar_firefox {
+    visibility: hidden;
+}
+
+#bar_chromium {
+    visibility: hidden;
+}
+
+#bar_txt {
+    visibility: hidden;
+}
+
+/*-------------------------- Language bar -------------------------*/
+
+#lan {
+    cursor: pointer;
+}
+
+#language-bar {
+    position: absolute;
+    z-index: 99998;
+    height: 110px;
+    width: 55px;
+    right: 70px;
+    bottom: -55px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 7px 7px 0px 0px;
+
+    color: black;
+    background: #B2C1D5;
+    text-align: center;
+
+    -webkit-transition: bottom 1s ease 0.1s;
+    -moz-transition: bottom 1s ease 0.1s;
+    -o-transition: bottom 1s ease 0.1s;
+    -ms-transition: bottom 1s ease 0.1s;
+
+    transition-property: bottom;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+
+#language-bar:hover {
+    bottom: 55px;
 }
