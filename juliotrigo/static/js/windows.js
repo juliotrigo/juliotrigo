@@ -282,7 +282,7 @@ var appWindows = {
         // The icon to show is not in the next free slot
         if (this.slot_index[id] < (this.next_free_slot - 1)) {
             var i;
-            for (i = this.slot_index[id]; i < 3; i++) {  // TODO
+            for (i = this.slot_index[id]; i < (this.slot_id.length - 1); i++) {
                 this.swapIcons(this.slot_id[i], this.slot_id[i + 1]);
             }
         }

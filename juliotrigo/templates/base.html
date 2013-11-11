@@ -20,8 +20,11 @@
 {% static "img/logos/Django.gif" as django_logo %}
 {% static "img/logos/Python.png" as python_logo %}
 {% static "img/logos/HTML5.png" as html5_logo %}
+{% static "img/logos/google_plus_base.png" as google_plus_base_logo %}
 {% static "img/desktop/folder.png" as folder_desktop %}
+{% static "img/desktop/recycle.png" as recycle_bin %}
 {% static "img/red-close-button.png" as close_button %}
+{% static "img/texteditor.gif" as text_editor %}
 {% static "js/windows.js" as windows_js %}
 {% static "js/modernizr-2.6.2.js" as modernizr_js %}
 {% static "js/dnd.js" as dnd_js %}
@@ -85,16 +88,16 @@
                         {% trans "Projects" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="README">
-                        {% trans "README" %}
-                    </p>
-                </div>
                 <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);">
                     <p>
                         <img src="{{ firefox_logo }}" alt="LICENSE">
                         {% trans "LICENSE" %}
+                    </p>
+                </div>
+                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
+                    <p>
+                        <img src="{{ text_editor }}" alt="README" height="48" width="48">
+                        {% trans "README" %}
                     </p>
                 </div>
             </div>
@@ -109,6 +112,14 @@
                     <p>
                         <img src="{{ firefox_logo }}" alt="Contact">
                         {% trans "Contact" %}
+                    </p>
+                </div>
+            </div>
+            <div id="recycle-bin" class="column">
+                <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
+                    <p>
+                        <img src="{{ recycle_bin }}" alt="Recycle Bin">
+                        {% trans "Recycle" %}
                     </p>
                 </div>
             </div>
@@ -141,6 +152,11 @@
                             <img src="{{ twitter_logo }}" alt="Twitter">
                         </a>
                     </li>
+                    <li class="align-left">
+                        <a href="https://plus.google.com/u/0/100694908548190777858">
+                            <img src="{{ google_plus_base_logo }}" alt="Google+" height="45" width="45">
+                        </a>
+                    </li>
 
                     <li class="align-left" id="bar_folder">
                         <div>
@@ -159,7 +175,7 @@
                     </li>
                     <li class="align-left" id="bar_txt">
                         <div>
-                            <img src="{{ chromium_logo }}" alt="Text">
+                            <img src="{{ text_editor }}" alt="Text" height="45" width="45">
                         </div>
                     </li>
 

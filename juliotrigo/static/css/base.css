@@ -79,14 +79,14 @@ a:hover {
 #name {
     position: absolute;
     bottom: 12%;
-    right: 3%;
+    left: 2%;
     width: 350px;
     height: 110px;
     padding: 0px;
     margin: 0px;
 
     font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
-    text-align: right;
+    text-align: left;
     font-size: 4.4em;
 
     color: #deeeff;
@@ -160,6 +160,12 @@ a:hover {
     position: absolute;
     top: 0px;
     left: 85px;
+}
+
+#recycle-bin {
+    position: absolute;
+    bottom: 75px;
+    right: 0px;
 }
 
 .file {

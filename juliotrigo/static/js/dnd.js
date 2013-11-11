@@ -15,18 +15,18 @@ var contact = document.getElementById('contact');
 var wrapper = document.getElementById('content-wrapper');
 
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
-work.style.top = '220px';
+work.style.top = '150px';
 work.style.left = '200px';
-projects.style.top = '320px';
-projects.style.left = '600px';
-readme.style.top = '100px';
-readme.style.left = '100px';
-license.style.top = '100px';
-license.style.left = '100px';
-about.style.top = '100px';
-about.style.left = '100px';
-contact.style.top = '100px';
-contact.style.left = '100px';
+projects.style.top = '170px';
+projects.style.left = '220px';
+readme.style.top = '20px';
+readme.style.left = '270px';
+license.style.top = '40px';
+license.style.left = '290px';
+about.style.top = '60px';
+about.style.left = '310px';
+contact.style.top = '80px';
+contact.style.left = '330px';
 
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
