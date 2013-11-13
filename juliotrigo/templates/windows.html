@@ -56,4 +56,13 @@
             {% block contact %}{% endblock %}
         </div>
     </section>
+    <section id="recycle" class="window" draggable="true" onclick="appWindows.selectWindow('recycle')" onmousedown="appWindows.selectWindow('recycle')">
+        <h1>
+            <img src="{{ close_button }}" alt="close" height="17" width="17" onclick="appWindows.hidestuff('recycle', appWindows.recycle.type);">
+            {% trans "Recycle Bin" %}
+        </h1>
+        <div class="window-content folder-content" draggable="false">
+            {% block recycle %}{% endblock %}
+        </div>
+    </section>
 {% endblock %}

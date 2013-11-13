@@ -12,6 +12,7 @@ var readme = document.getElementById('readme');
 var license = document.getElementById('license');
 var about = document.getElementById('about');
 var contact = document.getElementById('contact');
+var recycle = document.getElementById('recycle');
 var wrapper = document.getElementById('content-wrapper');
 
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
@@ -19,6 +20,8 @@ work.style.top = '150px';
 work.style.left = '200px';
 projects.style.top = '170px';
 projects.style.left = '220px';
+recycle.style.top = '190px';
+recycle.style.left = '240px';
 readme.style.top = '20px';
 readme.style.left = '270px';
 license.style.top = '40px';
@@ -27,6 +30,7 @@ about.style.top = '60px';
 about.style.left = '310px';
 contact.style.top = '80px';
 contact.style.left = '330px';
+
 
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
@@ -135,6 +139,10 @@ if (Modernizr.draganddrop) {
     contact.addEventListener('dragstart', handleDragStart, false);
     //contact.addEventListener('drag', handleDrag, false);
     contact.addEventListener('dragend', handleDragEnd, false);
+
+    recycle.addEventListener('dragstart', handleDragStart, false);
+    //recycle.addEventListener('drag', handleDrag, false);
+    recycle.addEventListener('dragend', handleDragEnd, false);
 
     document.body.addEventListener('dragenter', handleDragEnter, false);
     //wrapper.addEventListener('dragleave', handleDragLeave, false);

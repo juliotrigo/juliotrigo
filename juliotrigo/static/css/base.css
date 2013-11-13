@@ -301,6 +301,13 @@ a:hover {
     left: 0;
 }
 
+#recycle {
+    visibility: hidden;
+    z-index: 7;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
 /*-----------------------------------------------------------------*/
 /*---------------------------- FOOTER -----------------------------*/
 /*-----------------------------------------------------------------*/
@@ -362,6 +369,10 @@ footer#bottom-bar li p {
 }
 
 #bar_txt {
+    visibility: hidden;
+}
+
+#bar_recycle {
     visibility: hidden;
 }
 

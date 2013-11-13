@@ -51,14 +51,15 @@ var appWindows = {
 
     /* The index of the next free slot. */
     next_free_slot: 0,
-    slot_id: ['bar_folder', 'bar_firefox', 'bar_chromium', 'bar_txt'],
-    slot_index: {'bar_folder': 0, 'bar_firefox': 1, 'bar_chromium': 2, 'bar_txt': 3},
+    slot_id: ['bar_folder', 'bar_firefox', 'bar_chromium', 'bar_txt', 'bar_recycle'],
+    slot_index: {'bar_folder': 0, 'bar_firefox': 1, 'bar_chromium': 2, 'bar_txt': 3, 'bar_recycle': 4},
 
     /* Icons information. */
     folder:   {windows: [], type: 'FOLDER',   element_id: 'bar_folder',   visible: false},
     firefox:  {windows: [], type: 'FIREFOX',  element_id: 'bar_firefox',  visible: false},
     chromium: {windows: [], type: 'CHROMIUM', element_id: 'bar_chromium', visible: false},
     txt:      {windows: [], type: 'TXT',      element_id: 'bar_txt',      visible: false},
+    recycle:  {windows: [], type: 'RECYCLE',  element_id: 'bar_recycle',  visible: false},
 
     /**
      * Increments the global z-index.
@@ -254,6 +255,42 @@ var appWindows = {
 
                         // Swap slots
                         this.hideIcon(this.txt.element_id);
+                    }
+                }
+                break;
+            case this.recycle.type:
+                if (operation === 1) {
+
+                    // If this window has not been opened yet
+                    if (!existElementInArray(this.recycle.windows, windowId)) {
+                        this.recycle.windows.push(windowId);
+                    }
+
+                    // If the icon must become visible
+                    if ((this.recycle.windows.length > 0) && (!this.recycle.visible)) {
+
+                        // Swap slots
+                        this.showIcon(this.recycle.element_id);
+
+                        // Set the icon visible
+                        document.getElementById(this.recycle.element_id).style.visibility = "visible";
+                        this.recycle.visible = true;
+                    }
+
+                } else if (operation === -1) {
+
+                    // Remove this window
+                    removeElementFromArray(this.recycle.windows, windowId);
+
+                    // If the icon must become invisible
+                    if ((this.recycle.windows.length <= 0) && (this.recycle.visible)) {
+
+                        // Set the icon invisible
+                        document.getElementById(this.recycle.element_id).style.visibility = "hidden";
+                        this.recycle.visible = false;
+
+                        // Swap slots
+                        this.hideIcon(this.recycle.element_id);
                     }
                 }
                 break;
