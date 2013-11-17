@@ -10,21 +10,23 @@
 {% static "css/fonts.css" as fonts_css %}
 {% static "img/logos/logo45.png" as jt_logo_bar %}
 {% static "img/logos/logo32.png" as jt_logo_icon %}
-{% static "img/logos/logo_juliotrigo.png" as juliotrigo_logo %}
 {% static "img/logos/logo_watermark.png" as watermark_logo %}
 {% static "img/logos/Twitter.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
 {% static "img/logos/LinkedIn.png" as linkedin_logo %}
 {% static "img/logos/Firefox.png" as firefox_logo %}
 {% static "img/logos/Chromium.png" as chromium_logo %}
-{% static "img/logos/Django.gif" as django_logo %}
+{% static "img/logos/Django.png" as django_logo %}
 {% static "img/logos/Python.png" as python_logo %}
 {% static "img/logos/HTML5.png" as html5_logo %}
+{% static "img/logos/osi_standard_logo.png" as osi_logo %}
 {% static "img/logos/google_plus_base.png" as google_plus_base_logo %}
 {% static "img/desktop/folder.png" as folder_desktop %}
 {% static "img/desktop/recycle.png" as recycle_bin %}
+{% static "img/flags/flag_spain.png" as flag_spain %}
+{% static "img/flags/flag_uk.png" as flag_uk %}
 {% static "img/red-close-button.png" as close_button %}
-{% static "img/texteditor.gif" as text_editor %}
+{% static "img/texteditor.png" as text_editor %}
 {% static "js/windows.js" as windows_js %}
 {% static "js/modernizr-2.6.2.js" as modernizr_js %}
 {% static "js/dnd.js" as dnd_js %}
@@ -33,52 +35,22 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
+        <!--<meta name="viewport" content="width=device-width" />-->
         <link rel="stylesheet" type="text/css" href="{{ fonts_css }}" />
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
         <link rel="shortcut icon" href="{{ jt_logo_icon }}" />
         <script src="{{ modernizr_js }}"></script>
     </head>
     <body>
-        <div id="content-wrapper">
-            <!--
-            <div id="language-selection">
-                <form action="{% url 'set_language' %}" method="post">
-                    <div>
-                        {% csrf_token %}
-                        <input name="next" type="hidden" value="{{ get_full_path }}" />
-                        <select name="language">
-                            {% get_language_info_list for LANGUAGES as langs %}
-                            {% for language in langs %}
-                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                                    {{ language.name_local }} ({{ language.code }})
-                                </option>
-                            {% endfor %}
-                        </select>
-                        {# Translators: Language selection: submit button. #}
-                        <input type="submit" value="{% trans "Go" %}" />
-                    </div>
-                </form>
-            </div>
-            -->
-            <!--
-            <div id="logo">
-                <img src="{{ juliotrigo_logo }}" alt="Logo juliotrigo" height="50" width="200">
-            </div>
-            -->
-            <!--
+        <header>
+            <h1>{% trans "Julio Trigo" %}</h1>
+            <h2>{% trans "Hi there, I'm a Software Engineer based in " %}<span class="strike">{% trans "Alicante" %}</span>{% trans " London." %}</h2>
+            <h3>{% trans "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux" %}</h3>
             <div id="watermark">
-                <img src="{{ watermark_logo }}" alt="Logo JT watermark" height="277" width="230">
+                <img src="{{ watermark_logo }}" alt="Julio Trigo logo">
             </div>
-            -->
-            <div id="motto">
-                <h1>{% trans "Software Engineer" %}</h1>
-            </div>
-            <div id="description">
-                <h2>{% trans "Python, Django, REST, BDD,<br>HTML, CSS, XML, Linux,<br>ERP, NAV, SQL<br>JSON, Ajax,<br>GIT" %}</h2>
-            </div>
-             <div id="name">
-                <p>{% trans "Julio Trigo" %}</p>
-            </div>
+        </header>
+        <div id="content-wrapper">
             <div id="first-column" class="column">
                 <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);">
                     <p>
@@ -98,12 +70,6 @@
                         {% trans "LICENSE" %}
                     </p>
                 </div>
-                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
-                    <p>
-                        <img src="{{ text_editor }}" alt="README" height="48" width="48">
-                        {% trans "README" %}
-                    </p>
-                </div>
             </div>
             <div id="second-column" class="column">
                 <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);">
@@ -119,6 +85,14 @@
                     </p>
                 </div>
             </div>
+            <div id="third-column" class="column">
+                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
+                    <p>
+                        <img src="{{ text_editor }}" alt="README">
+                        {% trans "README" %}
+                    </p>
+                </div>
+            </div>
             <div id="recycle-bin" class="column">
                 <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
                     <p>
@@ -128,8 +102,8 @@
                 </div>
             </div>
             <div id="language-bar">
-                <p>EN</p>
-                <p>ES</p>
+                <p><img src="{{ flag_uk }}" alt="{% trans "English" %}"></p>
+                <p><img src="{{ flag_spain }}" alt="{% trans "Spanish" %}"></p>
             </div>
             {% block windows %}{% endblock %}
         </div>
@@ -138,7 +112,7 @@
                 <ul>
                     <li class="align-left">
                         <a href="{% url 'home' %}">
-                            <img src="{{ jt_logo_bar }}" alt="juliotrigo">
+                            <img src="{{ jt_logo_bar }}" alt="Julio Trigo logo">
                         </a>
                     </li>
                     <li class="align-left border-left">
@@ -158,34 +132,24 @@
                     </li>
                     <li class="align-left">
                         <a href="https://plus.google.com/u/0/100694908548190777858">
-                            <img src="{{ google_plus_base_logo }}" alt="Google+" height="45" width="45">
+                            <img src="{{ google_plus_base_logo }}" alt="Google+">
                         </a>
                     </li>
 
                     <li class="align-left" id="bar_folder">
-                        <div>
-                            <img src="{{ folder_desktop }}" alt="Folder">
-                        </div>
+                        <img src="{{ folder_desktop }}" alt="Folder">
                     </li>
                     <li class="align-left" id="bar_firefox">
-                        <div>
-                            <img src="{{ firefox_logo }}" alt="Firefox">
-                        </div>
+                        <img src="{{ firefox_logo }}" alt="Firefox">
                     </li>
                     <li class="align-left" id="bar_chromium">
-                        <div>
-                            <img src="{{ chromium_logo }}" alt="Chromium">
-                        </div>
+                        <img src="{{ chromium_logo }}" alt="Chromium">
                     </li>
                     <li class="align-left" id="bar_txt">
-                        <div>
-                            <img src="{{ text_editor }}" alt="Text" height="45" width="45">
-                        </div>
+                        <img src="{{ text_editor }}" alt="Text">
                     </li>
                     <li class="align-left" id="bar_recycle">
-                        <div>
-                            <img src="{{ recycle_bin }}" alt="Recycle Bin"  height="45" width="45">
-                        </div>
+                        <img src="{{ recycle_bin }}" alt="Recycle Bin">
                     </li>
 
                     <li class="align-right">
@@ -195,18 +159,23 @@
                         <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
                     </li>
                     <li class="align-right">
-                        <a href="http://www.python.org">
-                            <img src="{{ python_logo }}" alt="Python" height="45" width="35">
+                        <a href="http://www.djangoproject.com">
+                            <img src="{{ django_logo }}" alt="Django">
                         </a>
                     </li>
                     <li class="align-right">
-                        <a href="http://www.djangoproject.com">
-                            <img src="{{ django_logo }}" alt="Django" height="19" width="45">
+                        <a href="http://www.python.org">
+                            <img src="{{ python_logo }}" alt="Python">
+                        </a>
+                    </li>
+                    <li class="align-right">
+                        <a href="http://opensource.org/">
+                            <img src="{{ osi_logo }}" alt="Open Source Initiative">
                         </a>
                     </li>
                     <li class="align-right">
                         <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
-                            <img src="{{ html5_logo }}" alt="HTML5" height="45" width="45">
+                            <img src="{{ html5_logo }}" alt="HTML5">
                         </a>
                     </li>
                 </ul>

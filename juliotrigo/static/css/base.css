@@ -3,24 +3,32 @@
 /*------------------------------------------------------------------
 [Layout]
 
-* body
-    + Content / div#content-wrapper
-        - Logo / div#logo
-        - First Column / .column#first-column
-            - Files / .file
-        - Second Column / .column#second-column
-            - Files / .file
-        - Window / .window #work
-            - Header / h1
-            - Files / .window-content .folder-content .file
-        - Window / .window #projects
-            - Header / h1
-            - Files / .window-content .folder-content .file
-        - Window / .window #license
-            - Header / h1
-            - Text / .window-content .browser-content
-    + Footer / footer#bottom-bar
-    
+body
+    header                                      --> Header
+        h1                                          --> Name
+        h2                                          --> Motto
+        h3                                          --> Description
+        div#watermark                               --> Watermark
+    div#content-wrapper                         --> Content
+        .column#first-column                        --> First Column
+            .file                                       --> Files
+        .column#second-column                       --> Second Column
+            .file                                       --> Files
+        .column#third-column                        --> Third Column
+            .file                                       --> Files
+        .column#recycle-bin                         --> Recycle-bin
+            .file                                       --> Files
+        section.window                              --> Window
+            h1                                          --> Header
+            div .window-content .folder-content         --> Folder
+                .file                                       --> Files
+        section.window                              --> Window
+            h1                                          --> Header
+            div .window-content .browser-content        --> Browser
+        div#language-bar
+    footer#bottom-bar                           --> Footer
+        div > ul > li                               --> Element (link, img, text...)
+
 -------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------*/
@@ -58,6 +66,75 @@ a:hover {
 }
 
 /*-----------------------------------------------------------------*/
+/*---------------------------- HEADER -----------------------------*/
+/*-----------------------------------------------------------------*/
+
+body > header > h1, 
+body > header > h2, 
+body > header > h3,
+#watermark {
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
+    color: #deeeff;  /* TODO */
+
+    -webkit-transition: color 0.5s ease 0.1s;
+    -moz-transition: color 0.5s ease 0.1s;
+    -o-transition: color 0.5s ease 0.1s;
+    -ms-transition: color 0.5s ease 0.1s;
+
+    transition-property: color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay: 0.1s;
+}
+
+body > header > h1:hover, 
+body > header > h2:hover, 
+body > header > h3:hover {
+    color: white;
+}
+
+body > header > h1 {
+    top: 10%;
+    left: 39%;
+
+    font-size: 4.4em;
+    font-weight: normal;
+    text-align: left;
+}
+
+body > header > h2 {
+    top: 43%;
+    left: 30%;
+    width: 40%;
+
+    font-size: 2.4em;
+    font-weight: normal;
+    text-align: left;
+}
+
+body > header > h3 {
+    top: 20px;
+    right: 20px;
+
+    font-size: 1.5em;
+    font-weight: normal;
+    text-align: right;
+}
+
+#watermark {
+    top: 10%;
+    left: 30%;
+}
+
+.strike{
+    text-decoration: line-through;
+    color: #535565;
+}
+
+/*-----------------------------------------------------------------*/
 /*---------------------------- CONTENT ----------------------------*/
 /*-----------------------------------------------------------------*/
 
@@ -65,131 +142,35 @@ a:hover {
     margin: 0px 0px 85px 0px;
 }
 
-#logo {
-    position: absolute;
-    bottom: 12%;  /* top: 15% */
-    right: 3%;  /* left: 34 */
-    width: 200px;  /* 400 */
-    height: 50px;  /* 100 */
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-}
-
-#name {
-    position: absolute;
-    bottom: 12%;  /* bottom: 12% */
-    left: 37%;  /* left: 2% */
-    width: 350px;
-    height: 110px;
-    padding: 0px;
-    margin: 0px;
-
-    font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
-    text-align: left;
-    font-size: 4.4em;
-
-    color: #deeeff;
-}
-
-#name > h1, #name > p {
-    padding: 0px;
-    margin: 0px;
-
-}
-
-#watermark {
-    position: absolute;
-    top: 35px;  /* 15 5 */
-    right: 35px;  /* 43 40%:36 33 3 */
-    width: 230px;  /* 481 431 53%:160 40%:267 35%:234 34%:227 */
-    height: 277px;  /* 193 580 520 53%:193 40%:322 35%:281 34%:273 */
-    padding: 0px;
-    margin: 0px;
-    text-align: center;
-}
-
-#motto {
-    position: absolute;
-    top: 35px;  /* 15 5 35 */
-    left: 36%;  /* 3 23 */
-    width: 400px;  /* 30% */
-    height: 300px;  /* 50% */
-    padding: 0px;
-    margin: 0px;
-
-    font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
-    text-align: left;
-
-    color: #deeeff;
-    /*background-color: #5e8bff;*/  /* TODO */
-}
-
-#motto > h1 {
-    padding: 0px;
-    margin: 0px;
-
-    font-size: 2.4em;
-}
-
-#motto > p {
-    font-size: 1.8em;
-}
-
-#description {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 350px;
-    height: 220px;
-    padding: 0px;
-    margin: 0px;
-
-    font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
-    text-align: right;
-
-    color: #deeeff;
-    /*background-color: #5e8bff;*/  /* TODO */
-}
-
-#description > h2 {
-    padding: 0px;
-    margin: 0px;
-
-    font-size: 1.5em;
-}
-
-/* TODO */
-#language-selection {
-    position: absolute;
-    top: 0px;
-    right: 5%;
-    width: 13.3%;
-    height: 35px;
-    padding: 15px 0px 0px 0px;
-    text-align: center;
-    background-color: #deeeff;
-    border-radius: 0px 0px 10px 10px;
-}
-
 /*---------------------------- Columns ----------------------------*/
 
 .column {
+    position: absolute;
     margin: 0px;
     padding: 0px;
 }
 
+#first-column {
+    top: 0px;
+    left: 0px;
+}
+
 #second-column {
-    position: absolute;
     top: 0px;
     left: 85px;
 }
 
+#third-column {
+    top: 0px;
+    left: 170px;
+}
+
 #recycle-bin {
-    position: absolute;
     bottom: 75px;
     right: 0px;
 }
+
+/*---------------------------- File -------------------------------*/
 
 .file {
     margin: 20px 20px 0px 20px;
@@ -212,11 +193,9 @@ a:hover {
 
 .window {
     position: absolute;
-    /*top: 35%;
-    left: 20%;*/  /* For Google Chrome */
     margin: 0px;
     padding: 0px;
-    border-radius: 7px 7px 2px 2px;
+    border-radius: 7px 7px 0px 0px;
     background-color: white;
 }
 
@@ -261,10 +240,11 @@ a:hover {
     font-weight: normal;
     color: white;
     background-color: #535565; /* #535565 #4B4D5C */
+    cursor: move;
 }
 
 .window > h1 > img {
-    margin: 0px 10px 0px 0px;
+    margin: 0px 10px 0px 5px;
     cursor: pointer;
 }
 
@@ -287,11 +267,23 @@ a:hover {
     z-index: 1;
     top: 0;  /* For Google Chrome */
     left: 0;
+/*
+TODO
+    width: 40%;
+    height: 60%;
+*/
 }
 
 #projects {
     visibility: hidden;
     z-index: 2;
+    top: 0;  /* For Google Chrome */
+    left: 0;
+}
+
+#recycle {
+    visibility: hidden;
+    z-index: 7;
     top: 0;  /* For Google Chrome */
     left: 0;
 }
@@ -308,6 +300,11 @@ a:hover {
     z-index: 4;
     top: 0;  /* For Google Chrome */
     left: 0;
+/*
+TODO
+    width: 90%;
+    height: 80%;
+*/
 }
 
 #about {
@@ -324,13 +321,6 @@ a:hover {
     left: 0;
 }
 
-#recycle {
-    visibility: hidden;
-    z-index: 7;
-    top: 0;  /* For Google Chrome */
-    left: 0;
-}
-
 /*-----------------------------------------------------------------*/
 /*---------------------------- FOOTER -----------------------------*/
 /*-----------------------------------------------------------------*/
@@ -339,13 +329,13 @@ footer#bottom-bar {
     position: fixed;
     z-index: 99999;
     width: 100%;
+    height: 55px;
     bottom: 0px;
     left: 0px;
     padding: 0px;
     margin: 0px;
 
-    height: 55px;
-    background: #deeeff;
+    background: #E4E5EB;  /* #deeeff #E4E5EB     #D8DCEB #C2CCF8 */
 }
 
 footer#bottom-bar li {
@@ -416,8 +406,8 @@ footer#bottom-bar li p {
     margin: 0px;
     border-radius: 7px 7px 0px 0px;
 
-    color: black;
-    background: #B2C1D5;
+    color: #deeeff;
+    background: #d34836;  /* #B2C1D5 #7EB3CD */
     text-align: center;
 
     -webkit-transition: bottom 1s ease 0.1s;
@@ -434,3 +424,215 @@ footer#bottom-bar li p {
 #language-bar:hover {
     bottom: 55px;
 }
+
+#language-bar > p {
+    padding: 10px 0px 0px 0px;
+    margin: 0px;
+}
+
+/*-----------------------------------------------------------------*/
+/*----------------------------- IMG -------------------------------*/
+/*-----------------------------------------------------------------*/
+
+/* TODO: comment */
+.file img,
+footer li img {
+    height: 45px;
+    width: 45px;
+}
+
+/*
+#watermark > img {
+    height: 105px;
+    width: 87px;
+}
+
+.window > h1 > img {
+    height: 17px;
+    width: 17px;
+}
+
+#language-bar > p > img {
+    height: 32px;
+    width: 32px;
+}
+*/
+
+/*-----------------------------------------------------------------*/
+/*---------------------------- MEDIA ------------------------------*/
+/*-----------------------------------------------------------------*/
+
+@media only screen and
+       (min-width : 620px) and
+       (max-width : 1050px) {
+
+    body > header > h1 {
+        font-size: 3.08em;
+    }
+
+    body > header > h2 {
+        font-size: 1.68em;
+    }
+
+    body > header > h3 {
+        top: 10px;
+        right: 10px;
+        font-size: 1.1em;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    #content-wrapper {
+        margin: 0px 0px 60px 0px;
+    }
+
+    .file {
+        margin: 10px 10px 0px 10px;
+        width: 30px;
+    }
+
+    .file > p {
+        font-size: 0.8em;
+    }
+
+    #second-column {
+        left: 50px;
+    }
+
+    #third-column {
+        left: 100px;
+    }
+
+    #recycle-bin {
+        bottom: 51px;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    .window {
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .folder-content {
+/*
+TODO
+        width: 40%;
+        height: 60%;
+*/
+    }
+
+    .browser-content {
+/*
+TODO
+        width: 650px;
+        height: 450px;
+*/
+    }
+
+    .window > h1 {
+        padding: 3px;
+        border-radius: 5px 5px 0px 0px;
+
+        font-size: 1em;
+    }
+
+    .window > h1 > img {
+        margin: 0px 6px 0px 3px;
+    }
+
+    .browser-content > h2, .browser-content > p {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .browser-content > h2 {
+        font-size: 1.2em;
+    }
+
+    .browser-content > p {
+        font-size: 0.8em;
+    }
+
+    .browser-content > h2 {
+        text-shadow: 3px 3px 3px #aaa;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    footer#bottom-bar {
+        height: 38px;
+    }
+
+    footer#bottom-bar li {
+        padding: 4px 4px 4px 4px;
+        width: 30px;
+    }
+
+    footer#bottom-bar li p {
+        padding: 5px 0px 5px 0px;
+        height: 24px;
+        font-size: 0.8em;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    #language-bar {
+        height: 76px;
+        width: 30px;
+        right: 42px;
+        bottom: -38px;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    #language-bar:hover {
+        bottom: 38px;
+    }
+
+    #language-bar > p {
+        font-size: 0.8em;
+    }
+
+    #language-bar > p {
+        padding: 5px 0px 0px 0px;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    .file img,
+    footer li img {
+        height: 30px;
+        width: 30px;
+    }
+
+    #watermark > img {
+        height: 70px;
+        width: 58px;
+    }
+
+    .window > h1 > img {
+        height: 15px;
+        width: 15px;
+    }
+
+    #language-bar > p > img {
+        height: 22px;
+        width: 22px;
+    }
+}
+
+
+/*
+TODO
+@media only screen and
+       (min-width : 320px) and
+       (max-width : 568px){
+
+    .file {
+        margin: 5px 5px 0px 5px;
+    }
+
+    #name {
+        font-size: 1.76em;
+    }
+}
+*/

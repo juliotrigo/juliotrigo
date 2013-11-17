@@ -31,7 +31,6 @@ about.style.left = '310px';
 contact.style.top = '80px';
 contact.style.left = '330px';
 
-
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
 
