@@ -16,20 +16,20 @@ var recycle = document.getElementById('recycle');
 var wrapper = document.getElementById('content-wrapper');
 
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
-work.style.top = '150px';
-work.style.left = '200px';
-projects.style.top = '170px';
-projects.style.left = '220px';
-recycle.style.top = '190px';
-recycle.style.left = '240px';
+work.style.top = '20px';
+work.style.left = '20px';
+projects.style.top = '20px';
+projects.style.left = '20px';
+recycle.style.top = '20px';
+recycle.style.left = '20px';
+license.style.top = '20px';
+license.style.left = '20px';
+about.style.top = '20px';
+about.style.left = '20px';
+contact.style.top = '20px';
+contact.style.left = '20px';
 readme.style.top = '20px';
-readme.style.left = '270px';
-license.style.top = '40px';
-license.style.left = '290px';
-about.style.top = '60px';
-about.style.left = '310px';
-contact.style.top = '80px';
-contact.style.left = '330px';
+readme.style.left = '20px';
 
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';

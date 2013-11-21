@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% block windows %}
-    <section id="work" class="window" draggable="true" onclick="appWindows.selectWindow('work')" onmousedown="appWindows.selectWindow('work')">
+    <section id="work" class="window window-folder" draggable="true" onclick="appWindows.selectWindow('work')" onmousedown="appWindows.selectWindow('work')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('work', appWindows.folder.type);">
             {% trans "Work" %}
@@ -11,7 +11,7 @@
             {% block work %}{% endblock %}
         </div>
     </section>
-    <section id="projects" class="window" draggable="true" onclick="appWindows.selectWindow('projects')" onmousedown="appWindows.selectWindow('projects')">
+    <section id="projects" class="window window-folder" draggable="true" onclick="appWindows.selectWindow('projects')" onmousedown="appWindows.selectWindow('projects')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('projects', appWindows.folder.type);">
             {% trans "Projects" %}
@@ -20,16 +20,16 @@
             {% block projects %}{% endblock %}
         </div>
     </section>
-    <section id="readme" class="window" draggable="true" onclick="appWindows.selectWindow('readme')" onmousedown="appWindows.selectWindow('readme')">
+    <section id="readme" class="window window-txt" draggable="true" onclick="appWindows.selectWindow('readme')" onmousedown="appWindows.selectWindow('readme')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('readme', appWindows.txt.type);">
             {% trans "README" %}
         </h1>
-        <div class="window-content browser-content" draggable="false">
+        <div class="window-content txt-content" draggable="false">
             {% block readme %}{% endblock %}
         </div>
     </section>
-    <section id="license" class="window" draggable="true" onclick="appWindows.selectWindow('license')" onmousedown="appWindows.selectWindow('license')">
+    <section id="license" class="window window-browser" draggable="true" onclick="appWindows.selectWindow('license')" onmousedown="appWindows.selectWindow('license')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('license', appWindows.firefox.type);">
             {% trans "License - Mozilla Firefox" %}
@@ -38,7 +38,7 @@
             {% block license %}{% endblock %}
         </div>
     </section>
-    <section id="about" class="window" draggable="true" onclick="appWindows.selectWindow('about')" onmousedown="appWindows.selectWindow('about')">
+    <section id="about" class="window window-browser" draggable="true" onclick="appWindows.selectWindow('about')" onmousedown="appWindows.selectWindow('about')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('about', appWindows.firefox.type);">
             {% trans "About - Mozilla Firefox" %}
@@ -47,7 +47,7 @@
             {% block about %}{% endblock %}
         </div>
     </section>
-    <section id="contact" class="window" draggable="true" onclick="appWindows.selectWindow('contact')" onmousedown="appWindows.selectWindow('contact')">
+    <section id="contact" class="window window-browser" draggable="true" onclick="appWindows.selectWindow('contact')" onmousedown="appWindows.selectWindow('contact')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('contact', appWindows.firefox.type);">
             {% trans "Contact - Mozilla Firefox" %}
@@ -56,7 +56,7 @@
             {% block contact %}{% endblock %}
         </div>
     </section>
-    <section id="recycle" class="window" draggable="true" onclick="appWindows.selectWindow('recycle')" onmousedown="appWindows.selectWindow('recycle')">
+    <section id="recycle" class="window window-folder" draggable="true" onclick="appWindows.selectWindow('recycle')" onmousedown="appWindows.selectWindow('recycle')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('recycle', appWindows.recycle.type);">
             {% trans "Recycle Bin" %}

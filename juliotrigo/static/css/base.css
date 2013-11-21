@@ -199,6 +199,18 @@ body > header > h3 {
     background-color: white;
 }
 
+.window-folder {
+    width: 350px;  /* 350px */
+}
+
+.window-browser {
+    width: 92%;  /* 650px */
+}
+
+.window-txt {
+    width: 40%;
+}
+
 .window-content {
     overflow: auto;  /* scroll if necessary */
 
@@ -208,7 +220,6 @@ body > header > h3 {
 }
 
 .folder-content {
-    width: 350px;
     height: 250px;
 
     background-image: linear-gradient(bottom, rgb(207,207,207) 0%, rgb(255,255,255) 10%);
@@ -226,8 +237,11 @@ body > header > h3 {
 }
 
 .browser-content {
-    width: 650px;
-    height: 450px;
+    height: 520px;  /* 450px */  /* TODO */
+}
+
+.txt-content {
+     height: 520px;  /* TODO */
 }
 
 .window > h1 {
@@ -244,7 +258,7 @@ body > header > h3 {
 }
 
 .window > h1 > img {
-    margin: 0px 10px 0px 5px;
+    margin: 5px 5px 0px 5px;
     cursor: pointer;
 }
 
@@ -267,11 +281,6 @@ body > header > h3 {
     z-index: 1;
     top: 0;  /* For Google Chrome */
     left: 0;
-/*
-TODO
-    width: 40%;
-    height: 60%;
-*/
 }
 
 #projects {
@@ -300,11 +309,6 @@ TODO
     z-index: 4;
     top: 0;  /* For Google Chrome */
     left: 0;
-/*
-TODO
-    width: 90%;
-    height: 80%;
-*/
 }
 
 #about {
@@ -434,19 +438,20 @@ footer#bottom-bar li p {
 /*----------------------------- IMG -------------------------------*/
 /*-----------------------------------------------------------------*/
 
-/* TODO: comment */
+/* TODO - comment */
 .file img,
 footer li img {
     height: 45px;
     width: 45px;
 }
 
-/*
+/* TODO - comment */
 #watermark > img {
     height: 105px;
     width: 87px;
 }
 
+/*
 .window > h1 > img {
     height: 17px;
     width: 17px;
@@ -513,31 +518,31 @@ footer li img {
         border-radius: 5px 5px 0px 0px;
     }
 
+    .window-folder {
+        width: 210px;
+    }
+
     .folder-content {
-/*
-TODO
-        width: 40%;
-        height: 60%;
-*/
+        height: 150px;
     }
 
     .browser-content {
-/*
-TODO
-        width: 650px;
-        height: 450px;
-*/
+        height: 312px;  /* TODO */
+    }
+
+    .txt-content {
+        height: 312px;  /* TODO */
     }
 
     .window > h1 {
         padding: 3px;
         border-radius: 5px 5px 0px 0px;
 
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .window > h1 > img {
-        margin: 0px 6px 0px 3px;
+        margin: 3px 3px 0px 3px;
     }
 
     .browser-content > h2, .browser-content > p {
