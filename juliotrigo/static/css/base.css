@@ -196,23 +196,26 @@ body > header > h3 {
     margin: 0px;
     padding: 0px;
     border-radius: 7px 7px 0px 0px;
-    background-color: white;
+    background-color: #E4E5EB;
 }
 
 .window-folder {
-    width: 350px;  /* 350px */
+    width: 350px;
 }
 
 .window-browser {
-    width: 92%;  /* 650px */
+    width: 92%;
+    height: 80%;
 }
 
 .window-txt {
     width: 40%;
+    height: 80%;
 }
 
 .window-content {
     overflow: auto;  /* scroll if necessary */
+    background-color: white;
 
     border-left: 1px solid rgb(207,207,207);
     border-right: 1px solid rgb(207,207,207);
@@ -237,11 +240,11 @@ body > header > h3 {
 }
 
 .browser-content {
-    height: 520px;  /* 450px */  /* TODO */
+    height: 100%;
 }
 
 .txt-content {
-     height: 520px;  /* TODO */
+    height: 100%;
 }
 
 .window > h1 {
@@ -522,16 +525,16 @@ footer li img {
         width: 210px;
     }
 
+    .window-browser {
+        height: 73%;
+    }
+
+    .window-txt {
+        height: 73%;
+    }
+
     .folder-content {
         height: 150px;
-    }
-
-    .browser-content {
-        height: 312px;  /* TODO */
-    }
-
-    .txt-content {
-        height: 312px;  /* TODO */
     }
 
     .window > h1 {
