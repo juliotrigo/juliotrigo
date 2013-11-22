@@ -34,6 +34,9 @@ readme.style.left = '20px';
 // Plain drag type
 var PLAIN_DRAG_TYPE = 'text/plain';
 
+// Global var: used when getData is not accessible
+var offset_data;
+
 /**
  * dragstart
  */
@@ -45,10 +48,12 @@ function handleDragStart(event) {
     offset = elementID + ',' + (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY);
 
     event.dataTransfer.setData(PLAIN_DRAG_TYPE, offset);
-    event.dataTransfer.effectAllowed = 'move';
-    event.dataTransfer.dropEffect = 'move';
+    //event.dataTransfer.effectAllowed = 'move';
+    //event.dataTransfer.dropEffect = 'move';
 
-    this.style.opacity = '0.4';
+    //this.style.opacity = '0.4';
+
+    offset_data = offset;
 }
 
 /**
@@ -69,7 +74,8 @@ function handleDragEnd(event) {
 function handleDrop(event) {
     var offset, dElement;
 
-    offset = event.dataTransfer.getData(PLAIN_DRAG_TYPE).split(',');
+    offset = offset_data.split(',');
+    //offset = event.dataTransfer.getData(PLAIN_DRAG_TYPE).split(',');
     dElement = document.getElementById(offset[0]);
 
     dElement.style.left = (event.clientX + parseInt(offset[1], 10)) + 'px';
@@ -86,6 +92,15 @@ function handleDrop(event) {
  * dragover
  */
 function handleDragOver(event) {
+    var offset, dElement;
+
+    offset = offset_data.split(',');
+    //offset = event.dataTransfer.getData(PLAIN_DRAG_TYPE).split(',');
+    dElement = document.getElementById(offset[0]);
+
+    dElement.style.left = (event.clientX + parseInt(offset[1], 10)) + 'px';
+    dElement.style.top = (event.clientY + parseInt(offset[2], 10)) + 'px';
+
     if (event.preventDefault) {
         event.preventDefault();
     }
@@ -117,31 +132,31 @@ if (Modernizr.draganddrop) {
 
     work.addEventListener('dragstart', handleDragStart, false);
     //work.addEventListener('drag', handleDrag, false);
-    work.addEventListener('dragend', handleDragEnd, false);
+    //work.addEventListener('dragend', handleDragEnd, false);
 
     projects.addEventListener('dragstart', handleDragStart, false);
     //projects.addEventListener('drag', handleDrag, false);
-    projects.addEventListener('dragend', handleDragEnd, false);
+    //projects.addEventListener('dragend', handleDragEnd, false);
 
     readme.addEventListener('dragstart', handleDragStart, false);
     //readme.addEventListener('drag', handleDrag, false);
-    readme.addEventListener('dragend', handleDragEnd, false);
+    //readme.addEventListener('dragend', handleDragEnd, false);
 
     license.addEventListener('dragstart', handleDragStart, false);
     //license.addEventListener('drag', handleDrag, false);
-    license.addEventListener('dragend', handleDragEnd, false);
+    //license.addEventListener('dragend', handleDragEnd, false);
 
     about.addEventListener('dragstart', handleDragStart, false);
     //about.addEventListener('drag', handleDrag, false);
-    about.addEventListener('dragend', handleDragEnd, false);
+    //about.addEventListener('dragend', handleDragEnd, false);
 
     contact.addEventListener('dragstart', handleDragStart, false);
     //contact.addEventListener('drag', handleDrag, false);
-    contact.addEventListener('dragend', handleDragEnd, false);
+    //contact.addEventListener('dragend', handleDragEnd, false);
 
     recycle.addEventListener('dragstart', handleDragStart, false);
     //recycle.addEventListener('drag', handleDrag, false);
-    recycle.addEventListener('dragend', handleDragEnd, false);
+    //recycle.addEventListener('dragend', handleDragEnd, false);
 
     document.body.addEventListener('dragenter', handleDragEnter, false);
     //wrapper.addEventListener('dragleave', handleDragLeave, false);
