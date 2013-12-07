@@ -21,6 +21,7 @@
 {% static "img/logos/HTML5.png" as html5_logo %}
 {% static "img/logos/osi_standard_logo.png" as osi_logo %}
 {% static "img/logos/google_plus_base.png" as google_plus_base_logo %}
+{% static "img/logos/Blogger.png" as blogger_logo %}
 {% static "img/desktop/folder.png" as folder_desktop %}
 {% static "img/desktop/recycle.png" as recycle_bin %}
 {% static "img/flags/flag_spain.png" as flag_spain %}
@@ -46,9 +47,11 @@
             <h1>{% trans "Julio Trigo" %}</h1>
             <h2>{% trans "Hi there, I'm a Software Engineer based in " %}<span class="strike">{% trans "Alicante" %}</span>{% trans " London." %}</h2>
             <h3>{% trans "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux" %}</h3>
+            <!--
             <div id="watermark">
                 <img src="{{ watermark_logo }}" alt="Julio Trigo logo">
             </div>
+            -->
         </header>
         <div id="content-wrapper">
             <div id="first-column" class="column">
@@ -133,6 +136,11 @@
                     <li class="align-left">
                         <a href="https://plus.google.com/u/0/100694908548190777858">
                             <img src="{{ google_plus_base_logo }}" alt="Google+">
+                        </a>
+                    </li>
+                    <li class="align-left">
+                        <a href="http://blog.juliotrigo.com">
+                            <img src="{{ blogger_logo }}" alt="Blogger">
                         </a>
                     </li>
 

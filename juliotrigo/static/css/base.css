@@ -77,8 +77,9 @@ body > header > h3,
     padding: 0px;
     margin: 0px;
     font-family: 'Indie Flower', 'Handlee', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
-    color: #deeeff;  /* TODO */
+    color: white;  /* #deeeff */
 
+    /*
     -webkit-transition: color 0.5s ease 0.1s;
     -moz-transition: color 0.5s ease 0.1s;
     -o-transition: color 0.5s ease 0.1s;
@@ -88,19 +89,22 @@ body > header > h3,
     transition-duration: 0.5s;
     transition-timing-function: ease;
     transition-delay: 0.1s;
+    */
 }
 
+/*
 body > header > h1:hover, 
 body > header > h2:hover, 
 body > header > h3:hover {
     color: white;
 }
+*/
 
 body > header > h1 {
-    top: 10%;
-    left: 39%;
+    top: 12%;  /* 10% */
+    left: 37%;  /* 39% */
 
-    font-size: 4.4em;
+    font-size: 4.1em;  /* 4.4 */
     font-weight: normal;
     text-align: left;
 }
@@ -124,10 +128,12 @@ body > header > h3 {
     text-align: right;
 }
 
+/*
 #watermark {
     top: 10%;
     left: 30%;
 }
+*/
 
 .strike{
     text-decoration: line-through;
@@ -205,12 +211,12 @@ body > header > h3 {
 
 .window-browser {
     width: 92%;
-    height: 80%;
+    height: 73%;  /* 80% */
 }
 
 .window-txt {
     width: 40%;
-    height: 80%;
+    height: 73%;  /* 80% */
 }
 
 .window-content {
@@ -260,6 +266,15 @@ body > header > h3 {
     cursor: move;
 }
 
+#readme > h1 {
+    background: #B2B2FF;
+    color: black;
+}
+
+#license > h1 {
+    background: #757588;  /* #8787A1 #7A7A90 #757588 */
+}
+
 .window > h1 > img {
     margin: 5px 5px 0px 5px;
     cursor: pointer;
@@ -269,7 +284,7 @@ body > header > h3 {
     color: black;
 }
 
-.browser-content > h2, .browser-content > p {
+.browser-content > h2, .browser-content > p, pre {
     margin-left: 20px;
     margin-right: 20px;
     color: black;
@@ -278,6 +293,44 @@ body > header > h3 {
 .browser-content > h2 {
     text-shadow: 4px 4px 4px #aaa;
 }
+
+#license .browser-content {
+    background: white;
+}
+
+/*---------------------------- Menus ------------------------------*/
+
+.menu {
+    width: 100%;
+    border-bottom: 1px solid rgb(207,207,207);
+    background: #E4E5EB;
+}
+
+.menu-txt {
+    height: 30px;
+}
+
+.menu-browser {
+    height: 40px;
+}
+
+.menu-item {
+    float: left;
+    margin: 5px 0px 5px 15px;
+    font-size: 1.0em;
+    color: black;
+}
+
+.url-bar {
+    width: 70%;
+    padding: 4px 15px 4px 15px;
+
+    border-radius: 3px;
+    border: 1px solid #535565;
+    background: white;
+}
+
+/*-------------------------- Windows IDs --------------------------*/
 
 #work {
     visibility: hidden;
@@ -470,9 +523,10 @@ footer li img {
 /*---------------------------- MEDIA ------------------------------*/
 /*-----------------------------------------------------------------*/
 
+/* max-width : 1050px and min-width : 620px TODO */
 @media only screen and
-       (min-width : 620px) and
-       (max-width : 1050px) {
+       (min-width : 670px) and
+       (max-width : 1130px) {
 
     body > header > h1 {
         font-size: 3.08em;
@@ -526,11 +580,11 @@ footer li img {
     }
 
     .window-browser {
-        height: 73%;
+        height: 69%;  /* 73 */
     }
 
     .window-txt {
-        height: 73%;
+        height: 69%;  /* 73 */
     }
 
     .folder-content {
@@ -563,6 +617,24 @@ footer li img {
 
     .browser-content > h2 {
         text-shadow: 3px 3px 3px #aaa;
+    }
+
+    .menu-txt {
+        height: 22px;
+    }
+
+    .menu-browser {
+        height: 32px;
+    }
+
+    .menu-item {
+        margin: 3px 0px 3px 10px;
+        font-size: 0.8em;
+    }
+
+    .url-bar {
+        width: 55%;
+        padding: 3px 10px 3px 10px;
     }
 
     /*-----------------------------------------------------------------*/

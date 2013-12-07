@@ -25,6 +25,13 @@
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('readme', appWindows.txt.type);">
             {% trans "README" %}
         </h1>
+        <div class="menu menu-txt">
+            <span class="menu-item">{% trans "File" %}</span>
+            <span class="menu-item">{% trans "Edit" %}</span>
+            <span class="menu-item">{% trans "Format" %}</span>
+            <span class="menu-item">{% trans "View" %}</span>
+            <span class="menu-item">{% trans "Help" %}</span>
+        </div>
         <div class="window-content txt-content" draggable="false">
             {% block readme %}{% endblock %}
         </div>
@@ -32,8 +39,16 @@
     <section id="license" class="window window-browser" draggable="true" onclick="appWindows.selectWindow('license')" onmousedown="appWindows.selectWindow('license')">
         <h1>
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('license', appWindows.firefox.type);">
-            {% trans "License - Mozilla Firefox" %}
+            {% trans "LICENSE - Mozilla Firefox" %}
         </h1>
+        <div class="menu menu-browser">
+            <span class="menu-item url-bar">{% trans "/home/juliotrigo/Desktop/LICENSE.html" %}</span>
+            <span class="menu-item">{% trans "File" %}</span>
+            <span class="menu-item">{% trans "Edit" %}</span>
+            <span class="menu-item">{% trans "View" %}</span>
+            <span class="menu-item">{% trans "Bookmarks" %}</span>
+            <span class="menu-item">{% trans "Help" %}</span>
+        </div>
         <div class="window-content browser-content" draggable="false">
             {% block license %}{% endblock %}
         </div>
@@ -43,6 +58,14 @@
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('about', appWindows.firefox.type);">
             {% trans "About - Mozilla Firefox" %}
         </h1>
+        <div class="menu menu-browser">
+            <span class="menu-item url-bar">{% trans "/home/juliotrigo/Desktop/About.html" %}</span>
+            <span class="menu-item">{% trans "File" %}</span>
+            <span class="menu-item">{% trans "Edit" %}</span>
+            <span class="menu-item">{% trans "View" %}</span>
+            <span class="menu-item">{% trans "Bookmarks" %}</span>
+            <span class="menu-item">{% trans "Help" %}</span>
+        </div>
         <div class="window-content browser-content" draggable="false">
             {% block about %}{% endblock %}
         </div>
@@ -52,6 +75,14 @@
             <img src="{{ close_button }}" alt="close" onclick="appWindows.hidestuff('contact', appWindows.firefox.type);">
             {% trans "Contact - Mozilla Firefox" %}
         </h1>
+        <div class="menu menu-browser">
+            <span class="menu-item url-bar">{% trans "/home/juliotrigo/Desktop/Contact.html" %}</span>
+            <span class="menu-item">{% trans "File" %}</span>
+            <span class="menu-item">{% trans "Edit" %}</span>
+            <span class="menu-item">{% trans "View" %}</span>
+            <span class="menu-item">{% trans "Bookmarks" %}</span>
+            <span class="menu-item">{% trans "Help" %}</span>
+        </div>
         <div class="window-content browser-content" draggable="false">
             {% block contact %}{% endblock %}
         </div>
