@@ -8,6 +8,7 @@
  * 'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', 'Georgia', 'Trebuchet MS', 'Segoe UI', Tangerine
  * Verdana, Helvetica, Arial, sans-serif
  * 'Merienda', 'Dancing Script', 'Calligraffitti'
+ * 'PT Mono', 'Ubuntu Mono', 'Cousine', 'Inconsolata', 'Lekton', 'Droid Sans Mono', 'Anonymous Pro'
  * 
 */
 
@@ -35,3 +36,13 @@
  * 'Indie Flower'
  */
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+/**
+ * 'PT Mono'
+ */
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
+/**
+ * 'Ubuntu Mono'
+ */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);

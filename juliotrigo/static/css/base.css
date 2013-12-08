@@ -65,6 +65,12 @@ a:hover {
     text-decoration: none;
 }
 
+pre {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+}
+
 /*-----------------------------------------------------------------*/
 /*---------------------------- HEADER -----------------------------*/
 /*-----------------------------------------------------------------*/
@@ -284,7 +290,7 @@ body > header > h3 {
     color: black;
 }
 
-.browser-content > h2, .browser-content > p, pre {
+.browser-content > h2, .browser-content > p {
     margin-left: 20px;
     margin-right: 20px;
     color: black;
@@ -294,8 +300,29 @@ body > header > h3 {
     text-shadow: 4px 4px 4px #aaa;
 }
 
-#license .browser-content {
-    background: white;
+/*----------------------- Windows Content -------------------------*/
+
+#license .window-content {
+
+}
+
+#about .window-content {
+
+}
+
+.pre-item {
+    margin: 20px 20px 20px 20px;
+    font-size: 1.0em;
+    color: black;
+}
+
+.pre-tittle {
+    font-weight: bold;
+    color: #36393b;
+}
+
+.monospace {
+    font-family: 'PT Mono', 'Ubuntu Mono', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
 }
 
 /*---------------------------- Menus ------------------------------*/
@@ -617,6 +644,11 @@ footer li img {
 
     .browser-content > h2 {
         text-shadow: 3px 3px 3px #aaa;
+    }
+
+    .pre-item {
+        margin: 12px 12px 12px 12px;
+        font-size: 0.8em;
     }
 
     .menu-txt {
