@@ -57,13 +57,11 @@ li
     list-style-type: none;
 }
 
-a {
+a, a:hover, a:link, a:visited, a:active {
     text-decoration: none;
+    color: #0000FF;
 }
 
-a:hover {
-    text-decoration: none;
-}
 
 pre {
     display: inline;
@@ -75,8 +73,8 @@ pre {
 /*---------------------------- HEADER -----------------------------*/
 /*-----------------------------------------------------------------*/
 
-body > header > h1, 
-body > header > h2, 
+body > header > h1,
+body > header > h2,
 body > header > h3,
 #watermark {
     position: absolute;
@@ -277,7 +275,7 @@ body > header > h3 {
     color: black;
 }
 
-#license > h1 {
+#license > h1, #about > h1, #contact > h1 {
     background: #757588;  /* #8787A1 #7A7A90 #757588 */
 }
 
@@ -302,12 +300,8 @@ body > header > h3 {
 
 /*----------------------- Windows Content -------------------------*/
 
-#license .window-content {
-
-}
-
-#about .window-content {
-
+#license .window-content, #about .window-content, #contact .window-content {
+    background: #F7F7F7;  /* #E5E5E5 #F0F0F0 #F7F7F7 */
 }
 
 .pre-item {
@@ -317,8 +311,9 @@ body > header > h3 {
 }
 
 .pre-tittle {
+    font-size: 1.2em;
     font-weight: bold;
-    color: #36393b;
+    color: #004875;  /* #36393b #026aaa #024D7C */
 }
 
 .monospace {
@@ -649,6 +644,10 @@ footer li img {
     .pre-item {
         margin: 12px 12px 12px 12px;
         font-size: 0.8em;
+    }
+
+    .pre-tittle {
+        font-size: 1.2em;
     }
 
     .menu-txt {
