@@ -1,21 +1,9 @@
-<p>
-I am a software engineer.
-</p>
+{% load i18n %}
 
-<div class="pre-item monospace align-left">
-<pre>
-{
-   </pre><pre class="pre-tittle">"languages"</pre><pre>:[
-      "Python",
-      "C/AL (Microsoft Dynamics NAV)",
-      "C",
-      "C++",
-      "Java",
-      "JavaScript",
-      "SQL"
-   ]
-}
-</pre>
+<div id="about-column" class="align-left">
+    <p>
+        {% trans "My name is Julio Trigo and I am a software engineer based in London." %}
+    </p>
 </div>
 
 <div class="pre-item monospace align-left">
@@ -53,12 +41,51 @@ I am a software engineer.
 <div class="pre-item monospace align-left">
 <pre>
 {
+   </pre><pre class="pre-tittle">"languages"</pre><pre>:[
+      "Python",
+      "C/AL (Microsoft Dynamics NAV)",
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "SQL"
+   ]
+}
+</pre>
+</div>
+
+<div class="pre-item monospace align-left">
+<pre>
+{
    </pre><pre class="pre-tittle">"Web development"</pre><pre>:[
       "HTML",
       "CSS",
       "JavaScript",
       "DOM",
       "Ajax"
+   ]
+}
+</pre>
+</div>
+
+<div class="pre-item monospace align-left">
+<pre>
+{
+   </pre><pre class="pre-tittle">"Source control system"</pre><pre>:[
+      "Git",
+      "Subversion"
+   ]
+}
+</pre>
+</div>
+
+<div class="pre-item monospace align-left">
+<pre>
+{
+   </pre><pre class="pre-tittle">"Software Architecture styles and patterns"</pre><pre>:[
+      "REST (RESTful API)",
+      "MVC / MTV (Django)",
+      "S.O.L.I.D"
    ]
 }
 </pre>
@@ -95,54 +122,8 @@ I am a software engineer.
 <div class="pre-item monospace align-left">
 <pre>
 {
-   </pre><pre class="pre-tittle">"tools"</pre><pre>:[
-      "OpenSSH",
-      "OpenSSL",
-      "PuTTY (PuTTYGen, Pageant)",
-      "GPG"
-   ]
-}
-</pre>
-</div>
-
-<div class="pre-item monospace align-left">
-<pre>
-{
    </pre><pre class="pre-tittle">"HTTP Servers"</pre><pre>:[
       "Apache"
-   ]
-}
-</pre>
-</div>
-
-<div class="pre-item monospace align-left">
-<pre>
-{
-   </pre><pre class="pre-tittle">"Source control system"</pre><pre>:[
-      "Git",
-      "Subversion"
-   ]
-}
-</pre>
-</div>
-
-<div class="pre-item monospace align-left">
-<pre>
-{
-   </pre><pre class="pre-tittle">"Bug tracking system"</pre><pre>:[
-      "Trac"
-   ]
-}
-</pre>
-</div>
-
-<div class="pre-item monospace align-left">
-<pre>
-{
-   </pre><pre class="pre-tittle">"Software Architecture styles and patterns"</pre><pre>:[
-      "REST (RESTful API)",
-      "MVC / MTV (Django)",
-      "S.O.L.I.D"
    ]
 }
 </pre>
@@ -163,10 +144,11 @@ I am a software engineer.
 <div class="pre-item monospace align-left">
 <pre>
 {
-   </pre><pre class="pre-tittle">"IDE"</pre><pre>:[
-      "Eclipse (PyDev, WebTools, EGit, Subclipse)",
-      "NINJA IDE",
-      "Vim"
+   </pre><pre class="pre-tittle">"tools"</pre><pre>:[
+      "OpenSSH",
+      "OpenSSL",
+      "PuTTY (PuTTYGen, Pageant)",
+      "GPG"
    ]
 }
 </pre>
