@@ -1,4 +1,4 @@
 juliotrigo
 ==========
 
-Personal website.
+My personal website, powered by Django.
