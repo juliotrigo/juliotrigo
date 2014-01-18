@@ -5,23 +5,23 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-21 17:44+0100\n"
-"PO-Revision-Date: 2013-07-21 17:30+0100\n"
-"Last-Translator: juliotrigo <juliotrigocom@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2014-01-18 19:11+0000\n"
+"PO-Revision-Date: 2014-01-18 20:22+0100\n"
+"Last-Translator: juliotrigo\n"
+"Language-Team: translation\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:199
+#: settings/defaults.py:199 templates/base.html:126
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:201
+#: settings/defaults.py:201 templates/base.html:127
 msgid "Spanish"
 msgstr "Español"
 
@@ -61,11 +61,144 @@ msgstr "500 Error interno en el servidor"
 msgid "Server error. There's been a server error."
 msgstr "Error en el servidor. Ha habido un error en el servidor."
 
-#: templates/home.html:4
-msgid "Home"
-msgstr "Inicio"
+#: templates/base.html:46
+msgid "Julio Trigo"
+msgstr "Julio Trigo"
 
-#. Translators: This text will appear in all pages.
-#: templates/home.html:8
-msgid "Welcome to juliotrigo.com"
-msgstr "Bienvenido a juliotrigo.com"
+#: templates/base.html:47
+msgid "Hi there, I'm a Software Engineer based in"
+msgstr "Hola, soy un ingeniero informático residente en"
+
+#: templates/base.html:47
+msgid "Alicante"
+msgstr "Alicante"
+
+#: templates/base.html:47
+msgid "London."
+msgstr "Londres."
+
+#: templates/base.html:48
+msgid ""
+"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
+"DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
+msgstr ""
+"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
+"DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
+
+#: templates/base.html:61 templates/windows.html:8
+msgid "Work"
+msgstr "Trabajo"
+
+#: templates/base.html:67 templates/windows.html:20
+msgid "Projects"
+msgstr "Proyectos"
+
+#: templates/base.html:73
+msgid "LICENSE"
+msgstr "LICENSE"
+
+#: templates/base.html:81
+msgid "About"
+msgstr "Acerca"
+
+#: templates/base.html:87
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/base.html:95 templates/windows.html:32
+msgid "README"
+msgstr "LEEME"
+
+#: templates/base.html:103
+msgid "Recycle"
+msgstr "Papelera"
+
+#. Translators: Language selection: submit button.
+#: templates/base.html:122
+msgid "Go"
+msgstr "Ir"
+
+#: templates/base.html:185
+msgid "LAN"
+msgstr "LAN"
+
+#: templates/home.html:4
+msgid "juliotrigo - Software Engineer"
+msgstr "juliotrigo - Ingeniero Informático"
+
+#: templates/windows.html:11
+msgid "/home/juliotrigo/Desktop/Work"
+msgstr "/home/juliotrigo/Escritorio/Trabajo"
+
+#: templates/windows.html:23
+msgid "/home/juliotrigo/Desktop/Projects"
+msgstr "/home/juliotrigo/Escritorio/Proyectos"
+
+#: templates/windows.html:35 templates/windows.html.py:52
+#: templates/windows.html:69 templates/windows.html.py:86
+msgid "File"
+msgstr "Archivo"
+
+#: templates/windows.html:36 templates/windows.html.py:53
+#: templates/windows.html:70 templates/windows.html.py:87
+msgid "Edit"
+msgstr "Edición"
+
+#: templates/windows.html:37
+msgid "Format"
+msgstr "Formato"
+
+#: templates/windows.html:38 templates/windows.html.py:54
+#: templates/windows.html:71 templates/windows.html.py:88
+msgid "View"
+msgstr "Ver"
+
+#: templates/windows.html:39 templates/windows.html.py:56
+#: templates/windows.html:73 templates/windows.html.py:90
+msgid "Help"
+msgstr "Ayuda"
+
+#: templates/windows.html:48
+msgid "LICENSE - Mozilla Firefox"
+msgstr "LICENSE - Mozilla Firefox"
+
+#: templates/windows.html:51
+msgid "file:///home/juliotrigo/Desktop/LICENSE.html"
+msgstr "file:///home/juliotrigo/Escritorio/LICENSE.html"
+
+#: templates/windows.html:55 templates/windows.html.py:72
+#: templates/windows.html:89
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: templates/windows.html:65
+msgid "About - Mozilla Firefox"
+msgstr "Acerca - Mozilla Firefox"
+
+#: templates/windows.html:68
+msgid "file:///home/juliotrigo/Desktop/About.html"
+msgstr "file:///home/juliotrigo/Escritorio/Acerca.html"
+
+#: templates/windows.html:82
+msgid "Contact - Mozilla Firefox"
+msgstr "Contacto - Mozilla Firefox"
+
+#: templates/windows.html:85
+msgid "file:///home/juliotrigo/Desktop/Contact.html"
+msgstr "file:///home/juliotrigo/Escritorio/Contacto.html"
+
+#: templates/windows.html:99
+msgid "Recycle Bin"
+msgstr "Papelera de reciclaje"
+
+#: templates/windows_about.html:5
+msgid "My name is Julio Trigo and I am a software engineer based in London."
+msgstr ""
+"Mi nombre es Julio Trigo y soy un ingeniero sofware con residencia en "
+"Londres."
+
+#~ msgid "Home"
+#~ msgstr "Inicio"
+
+#~ msgid "Welcome to juliotrigo.com"
+#~ msgstr "Bienvenido a juliotrigo.com"

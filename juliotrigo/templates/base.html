@@ -10,7 +10,6 @@
 {% static "css/fonts.css" as fonts_css %}
 {% static "img/logos/logo45.png" as jt_logo_bar %}
 {% static "img/logos/logo32.png" as jt_logo_icon %}
-{% static "img/logos/logo_watermark.png" as watermark_logo %}
 {% static "img/logos/Twitter.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
 {% static "img/logos/LinkedIn.png" as linkedin_logo %}
@@ -45,9 +44,10 @@
     <body>
         <header>
             <h1>{% trans "Julio Trigo" %}</h1>
-            <h2>{% trans "Hi there, I'm a Software Engineer based in " %}<span class="strike">{% trans "Alicante" %}</span>{% trans " London." %}</h2>
+            <h2>{% trans "Hi there, I'm a Software Engineer based in" %} <span class="strike">{% trans "Alicante" %}</span> {% trans "London." %}</h2>
             <h3>{% trans "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux" %}</h3>
             <!--
+            {% static "img/logos/logo_watermark.png" as watermark_logo %}
             <div id="watermark">
                 <img src="{{ watermark_logo }}" alt="Julio Trigo logo">
             </div>
@@ -105,8 +105,21 @@
                 </div>
             </div>
             <div id="language-bar">
-                <p><img src="{{ flag_uk }}" alt="{% trans "English" %}"></p>
-                <p><img src="{{ flag_spain }}" alt="{% trans "Spanish" %}"></p>
+                {% get_language_info_list for LANGUAGES as langs %}
+                {% for language in langs %}
+                    <form action="{% url 'set_language' %}" method="post">
+	                    {% csrf_token %}
+	                    <input name="next" type="hidden" value="{{ get_full_path }}" />
+	                    <input name="language" type="hidden" value="{{ language.code }}"/>
+	                    {% if language.code == 'es' %}
+	                        <p><input type="image" src="{{ flag_spain }}" alt="{% trans "Spanish" %}" /></p>
+	                    {% elif language.code == 'en' %}
+	                        <p><input type="image" src="{{ flag_uk }}" alt="{% trans "English" %}" /></p>
+	                    {% else %}
+	                        <p><input type="submit" value="{{ language.code }}" /></p>
+	                    {% endif %}
+                    </form>
+                {% endfor %}
             </div>
             {% block windows %}{% endblock %}
         </div>

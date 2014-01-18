@@ -360,7 +360,7 @@ body > header > h3 {
 }
 
 .url-bar {
-    width: 70%;
+    width: 60%;  /* 70% */
     padding: 4px 15px 4px 15px;
 
     border-radius: 3px;
@@ -523,7 +523,7 @@ footer#bottom-bar li p {
     bottom: 55px;
 }
 
-#language-bar > p {
+#language-bar > form > p {
     padding: 10px 0px 0px 0px;
     margin: 0px;
 }
@@ -551,7 +551,7 @@ footer li img {
     width: 17px;
 }
 
-#language-bar > p > img {
+#language-bar > form > p > input {
     height: 32px;
     width: 32px;
 }
@@ -686,7 +686,7 @@ footer li img {
     }
 
     .url-bar {
-        width: 55%;
+        width: 50%;  /* 55% */
         padding: 3px 10px 3px 10px;
     }
 
@@ -721,12 +721,9 @@ footer li img {
         bottom: 38px;
     }
 
-    #language-bar > p {
-        font-size: 0.8em;
-    }
-
-    #language-bar > p {
+    #language-bar > form > p {
         padding: 5px 0px 0px 0px;
+        font-size: 0.8em;
     }
 
     /*-----------------------------------------------------------------*/
@@ -747,7 +744,7 @@ footer li img {
         width: 15px;
     }
 
-    #language-bar > p > img {
+    #language-bar > form > p > input {
         height: 22px;
         width: 22px;
     }
