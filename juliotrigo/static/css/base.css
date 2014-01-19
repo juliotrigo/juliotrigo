@@ -614,7 +614,7 @@ footer li img {
     }
 
     .window-folder {
-        width: 210px;
+        width: 230px;  /* 210px */
     }
 
     .window-browser {
