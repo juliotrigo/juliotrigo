@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-18 19:11+0000\n"
-"PO-Revision-Date: 2014-01-18 20:22+0100\n"
+"POT-Creation-Date: 2014-01-19 19:31+0000\n"
+"PO-Revision-Date: 2014-01-19 19:36+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -17,13 +17,26 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:199 templates/base.html:126
+#: settings/defaults.py:227 templates/base.html:120
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:201 templates/base.html:127
+#: settings/defaults.py:229 templates/base.html:118
 msgid "Spanish"
 msgstr "Español"
+
+#: templates/400.html:4
+msgid "Bad Request"
+msgstr "Solicitud Incorrecta"
+
+#: templates/400.html:7
+msgid "400 Bad Request"
+msgstr "400 Solicitud Incorrecta"
+
+#: templates/400.html:8
+msgid "The server could not understand the request due to malformed syntax."
+msgstr ""
+"El servidor no pudo interpretar la petición debido a una incorrecta sintaxis."
 
 #: templates/403.html:4
 msgid "Permission denied"
@@ -58,26 +71,26 @@ msgid "500 Internal Server Error"
 msgstr "500 Error interno en el servidor"
 
 #: templates/500.html:8
-msgid "Server error. There's been a server error."
+msgid "Server error. There has been a server error."
 msgstr "Error en el servidor. Ha habido un error en el servidor."
 
-#: templates/base.html:46
+#: templates/base.html:47
 msgid "Julio Trigo"
 msgstr "Julio Trigo"
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "Hi there, I'm a Software Engineer based in"
 msgstr "Hola, soy un ingeniero informático residente en"
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "Alicante"
 msgstr "Alicante"
 
-#: templates/base.html:47
+#: templates/base.html:48
 msgid "London."
 msgstr "Londres."
 
-#: templates/base.html:48
+#: templates/base.html:49
 msgid ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
 "DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
@@ -85,40 +98,35 @@ msgstr ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
 "DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
 
-#: templates/base.html:61 templates/windows.html:8
+#: templates/base.html:64 templates/windows.html:8
 msgid "Work"
 msgstr "Trabajo"
 
-#: templates/base.html:67 templates/windows.html:20
+#: templates/base.html:70 templates/windows.html:20
 msgid "Projects"
 msgstr "Proyectos"
 
-#: templates/base.html:73
+#: templates/base.html:76
 msgid "LICENSE"
-msgstr "LICENSE"
+msgstr "LICENCIA"
 
-#: templates/base.html:81
+#: templates/base.html:84
 msgid "About"
 msgstr "Acerca"
 
-#: templates/base.html:87
+#: templates/base.html:90
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/base.html:95 templates/windows.html:32
+#: templates/base.html:98 templates/windows.html:32
 msgid "README"
 msgstr "LEEME"
 
-#: templates/base.html:103
+#: templates/base.html:106
 msgid "Recycle"
 msgstr "Papelera"
 
-#. Translators: Language selection: submit button.
-#: templates/base.html:122
-msgid "Go"
-msgstr "Ir"
-
-#: templates/base.html:185
+#: templates/base.html:183
 msgid "LAN"
 msgstr "LAN"
 
@@ -160,11 +168,11 @@ msgstr "Ayuda"
 
 #: templates/windows.html:48
 msgid "LICENSE - Mozilla Firefox"
-msgstr "LICENSE - Mozilla Firefox"
+msgstr "LICENCIA - Mozilla Firefox"
 
 #: templates/windows.html:51
 msgid "file:///home/juliotrigo/Desktop/LICENSE.html"
-msgstr "file:///home/juliotrigo/Escritorio/LICENSE.html"
+msgstr "file:///home/juliotrigo/Escritorio/LICENCIA.html"
 
 #: templates/windows.html:55 templates/windows.html.py:72
 #: templates/windows.html:89
@@ -196,6 +204,9 @@ msgid "My name is Julio Trigo and I am a software engineer based in London."
 msgstr ""
 "Mi nombre es Julio Trigo y soy un ingeniero sofware con residencia en "
 "Londres."
+
+#~ msgid "Go"
+#~ msgstr "Ir"
 
 #~ msgid "Home"
 #~ msgstr "Inicio"
