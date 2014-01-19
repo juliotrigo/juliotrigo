@@ -9,6 +9,7 @@ from django.conf import global_settings as DEFAULT_SETTINGS
 
 PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__).replace('\\','/'), '..'))
 BASE_PATH = os.path.abspath(os.path.join(PROJECT_PATH, '..'))
+BASE_DEPLOY = '/var/www/juliotrigo'
 
 # This is defined here as a do-nothing function because we can't import
 # django.utils.translation -- that module depends on the settings.
@@ -24,7 +25,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(BASE_PATH, 'sqlite3_juliotrigo.db'), # Or path to database file if using sqlite3.
+        'NAME': os.path.join(BASE_DEPLOY, 'bd', 'sqlite3_juliotrigo.db'), # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -75,7 +76,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DEPLOY, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -156,12 +157,34 @@ INSTALLED_APPS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        }
+    },
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
     'handlers': {
+        'file_info': {
+            'level': 'INFO',
+            'filters': ['require_debug_false'],
+            'class': 'logging.FileHandler',
+            'filename': '/var/www/juliotrigo/log/info.log',
+            'formatter': 'verbose'
+        },
+        'file_error': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'logging.FileHandler',
+            'filename': '/var/www/juliotrigo/log/error.log',
+            'formatter': 'verbose'
+        },
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
@@ -169,11 +192,16 @@ LOGGING = {
         }
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
+        'django': {
+            'handlers': ['file_info', 'file_error'],
+            'level': 'DEBUG',
+            'propagate': True
         },
+        'django.request': {
+            'handlers': ['file_info', 'file_error'],
+            'level': 'DEBUG',
+            'propagate': True
+        }
     }
 }
 
