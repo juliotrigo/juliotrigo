@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Server error" %}{% endblock %}
+{% block title %}{% trans "Bad Request" %}{% endblock %}
 
 {% block header %}
-    <h1>{% trans "500 Internal Server Error" %}</h1>
-    <p>{% trans "Server error. There has been a server error." %}</p>
+    <h1>{% trans "400 Bad Request" %}</h1>
+    <p>{% trans "The server could not understand the request due to malformed syntax." %}</p>
 {% endblock %}
 {% block content %}
     <div id="content-wrapper">

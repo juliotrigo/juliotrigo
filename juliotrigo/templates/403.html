@@ -3,7 +3,20 @@
 
 {% block title %}{% trans "Permission denied" %}{% endblock %}
 
-{% block content %}
-    <h2>{% trans "403 Forbidden" %}</h2>
+{% block header %}
+    <h1>{% trans "403 Forbidden" %}</h1>
     <p>{% trans "Permission denied. You don't have the permission to do this action." %}</p>
+{% endblock %}
+{% block content %}
+    <div id="content-wrapper">
+        <div id="first-column" class="column">
+            <div class="file">
+                <p>
+                    <a href="{% url 'home' %}">
+                        <img src="{{ jt_logo_bar }}" alt="Julio Trigo logo">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

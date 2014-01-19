@@ -43,165 +43,169 @@
     </head>
     <body>
         <header>
-            <h1>{% trans "Julio Trigo" %}</h1>
-            <h2>{% trans "Hi there, I'm a Software Engineer based in" %} <span class="strike">{% trans "Alicante" %}</span> {% trans "London." %}</h2>
-            <h3>{% trans "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux" %}</h3>
-            <!--
-            {% static "img/logos/logo_watermark.png" as watermark_logo %}
-            <div id="watermark">
-                <img src="{{ watermark_logo }}" alt="Julio Trigo logo">
-            </div>
-            -->
+            {% block header %}
+                <h1>{% trans "Julio Trigo" %}</h1>
+                <h2>{% trans "Hi there, I'm a Software Engineer based in" %} <span class="strike">{% trans "Alicante" %}</span> {% trans "London." %}</h2>
+                <h3>{% trans "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux" %}</h3>
+                <!--
+                {% static "img/logos/logo_watermark.png" as watermark_logo %}
+                <div id="watermark">
+                    <img src="{{ watermark_logo }}" alt="Julio Trigo logo">
+                </div>
+                -->
+            {% endblock %}
         </header>
-        <div id="content-wrapper">
-            <div id="first-column" class="column">
-                <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);">
-                    <p>
-                        <img src="{{ folder_desktop }}" alt="Work">
-                        {% trans "Work" %}
-                    </p>
+        {% block content %}
+            <div id="content-wrapper">
+                <div id="first-column" class="column">
+                    <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);">
+                        <p>
+                            <img src="{{ folder_desktop }}" alt="Work">
+                            {% trans "Work" %}
+                        </p>
+                    </div>
+                    <div class="file" ondblclick="appWindows.showstuff('projects', appWindows.folder.type);">
+                        <p>
+                            <img src="{{ folder_desktop }}" alt="Projects">
+                            {% trans "Projects" %}
+                        </p>
+                    </div>
+                    <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);">
+                        <p>
+                            <img src="{{ firefox_logo }}" alt="LICENSE">
+                            {% trans "LICENSE" %}
+                        </p>
+                    </div>
                 </div>
-                <div class="file" ondblclick="appWindows.showstuff('projects', appWindows.folder.type);">
-                    <p>
-                        <img src="{{ folder_desktop }}" alt="Projects">
-                        {% trans "Projects" %}
-                    </p>
+                <div id="second-column" class="column">
+                    <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);">
+                        <p>
+                            <img src="{{ firefox_logo }}" alt="About">
+                            {% trans "About" %}
+                        </p>
+                    </div>
+                    <div class="file" ondblclick="appWindows.showstuff('contact', appWindows.firefox.type);">
+                        <p>
+                            <img src="{{ firefox_logo }}" alt="Contact">
+                            {% trans "Contact" %}
+                        </p>
+                    </div>
                 </div>
-                <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="LICENSE">
-                        {% trans "LICENSE" %}
-                    </p>
+                <div id="third-column" class="column">
+                    <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
+                        <p>
+                            <img src="{{ text_editor }}" alt="README">
+                            {% trans "README" %}
+                        </p>
+                    </div>
                 </div>
+                <div id="recycle-bin" class="column">
+                    <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
+                        <p>
+                            <img src="{{ recycle_bin }}" alt="Recycle Bin">
+                            {% trans "Recycle" %}
+                        </p>
+                    </div>
+                </div>
+                <div id="language-bar">
+                    {% get_language_info_list for LANGUAGES as langs %}
+                    {% for language in langs %}
+                        <form action="{% url 'set_language' %}" method="post">
+                            {% csrf_token %}
+                            <input name="next" type="hidden" value="{{ get_full_path }}" />
+                            <input name="language" type="hidden" value="{{ language.code }}"/>
+                            {% if language.code == 'es' %}
+                                <p><input type="image" src="{{ flag_spain }}" alt="{% trans "Spanish" %}" /></p>
+                            {% elif language.code == 'en' %}
+                                <p><input type="image" src="{{ flag_uk }}" alt="{% trans "English" %}" /></p>
+                            {% else %}
+                                <p><input type="submit" value="{{ language.code }}" /></p>
+                            {% endif %}
+                        </form>
+                    {% endfor %}
+                </div>
+                {% block windows %}{% endblock %}
             </div>
-            <div id="second-column" class="column">
-                <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="About">
-                        {% trans "About" %}
-                    </p>
-                </div>
-                <div class="file" ondblclick="appWindows.showstuff('contact', appWindows.firefox.type);">
-                    <p>
-                        <img src="{{ firefox_logo }}" alt="Contact">
-                        {% trans "Contact" %}
-                    </p>
-                </div>
-            </div>
-            <div id="third-column" class="column">
-                <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
-                    <p>
-                        <img src="{{ text_editor }}" alt="README">
-                        {% trans "README" %}
-                    </p>
-                </div>
-            </div>
-            <div id="recycle-bin" class="column">
-                <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
-                    <p>
-                        <img src="{{ recycle_bin }}" alt="Recycle Bin">
-                        {% trans "Recycle" %}
-                    </p>
-                </div>
-            </div>
-            <div id="language-bar">
-                {% get_language_info_list for LANGUAGES as langs %}
-                {% for language in langs %}
-                    <form action="{% url 'set_language' %}" method="post">
-	                    {% csrf_token %}
-	                    <input name="next" type="hidden" value="{{ get_full_path }}" />
-	                    <input name="language" type="hidden" value="{{ language.code }}"/>
-	                    {% if language.code == 'es' %}
-	                        <p><input type="image" src="{{ flag_spain }}" alt="{% trans "Spanish" %}" /></p>
-	                    {% elif language.code == 'en' %}
-	                        <p><input type="image" src="{{ flag_uk }}" alt="{% trans "English" %}" /></p>
-	                    {% else %}
-	                        <p><input type="submit" value="{{ language.code }}" /></p>
-	                    {% endif %}
-                    </form>
-                {% endfor %}
-            </div>
-            {% block windows %}{% endblock %}
-        </div>
-        <footer id="bottom-bar">
-            <div>
-                <ul>
-                    <li class="align-left">
-                        <a href="{% url 'home' %}">
-                            <img src="{{ jt_logo_bar }}" alt="Julio Trigo logo">
-                        </a>
-                    </li>
-                    <li class="align-left border-left">
-                        <a href="https://github.com/juliotrigo">
-                            <img src="{{ github_logo }}" alt="GitHub">
-                        </a>
-                    </li>
-                    <li class="align-left">
-                        <a href="http://uk.linkedin.com/in/juliotrigo/en">
-                            <img src="{{ linkedin_logo }}" alt="LinkedIn">
-                        </a>
-                    </li>
-                    <li class="align-left">
-                        <a href="https://twitter.com/juliotrigo">
-                            <img src="{{ twitter_logo }}" alt="Twitter">
-                        </a>
-                    </li>
-                    <li class="align-left">
-                        <a href="https://plus.google.com/+JulioTrigoGuijarro">
-                            <img src="{{ google_plus_base_logo }}" alt="Google+">
-                        </a>
-                    </li>
-                    <li class="align-left">
-                        <a href="http://blog.juliotrigo.com">
-                            <img src="{{ blogger_logo }}" alt="Blogger">
-                        </a>
-                    </li>
+            <footer id="bottom-bar">
+                <div>
+                    <ul>
+                        <li class="align-left">
+                            <a href="{% url 'home' %}">
+                                <img src="{{ jt_logo_bar }}" alt="Julio Trigo logo">
+                            </a>
+                        </li>
+                        <li class="align-left border-left">
+                            <a href="https://github.com/juliotrigo">
+                                <img src="{{ github_logo }}" alt="GitHub">
+                            </a>
+                        </li>
+                        <li class="align-left">
+                            <a href="http://uk.linkedin.com/in/juliotrigo/en">
+                                <img src="{{ linkedin_logo }}" alt="LinkedIn">
+                            </a>
+                        </li>
+                        <li class="align-left">
+                            <a href="https://twitter.com/juliotrigo">
+                                <img src="{{ twitter_logo }}" alt="Twitter">
+                            </a>
+                        </li>
+                        <li class="align-left">
+                            <a href="https://plus.google.com/+JulioTrigoGuijarro">
+                                <img src="{{ google_plus_base_logo }}" alt="Google+">
+                            </a>
+                        </li>
+                        <li class="align-left">
+                            <a href="http://blog.juliotrigo.com">
+                                <img src="{{ blogger_logo }}" alt="Blogger">
+                            </a>
+                        </li>
 
-                    <li class="align-left" id="bar_folder">
-                        <img src="{{ folder_desktop }}" alt="Folder">
-                    </li>
-                    <li class="align-left" id="bar_firefox">
-                        <img src="{{ firefox_logo }}" alt="Firefox">
-                    </li>
-                    <li class="align-left" id="bar_chromium">
-                        <img src="{{ chromium_logo }}" alt="Chromium">
-                    </li>
-                    <li class="align-left" id="bar_txt">
-                        <img src="{{ text_editor }}" alt="Text">
-                    </li>
-                    <li class="align-left" id="bar_recycle">
-                        <img src="{{ recycle_bin }}" alt="Recycle Bin">
-                    </li>
+                        <li class="align-left" id="bar_folder">
+                            <img src="{{ folder_desktop }}" alt="Folder">
+                        </li>
+                        <li class="align-left" id="bar_firefox">
+                            <img src="{{ firefox_logo }}" alt="Firefox">
+                        </li>
+                        <li class="align-left" id="bar_chromium">
+                            <img src="{{ chromium_logo }}" alt="Chromium">
+                        </li>
+                        <li class="align-left" id="bar_txt">
+                            <img src="{{ text_editor }}" alt="Text">
+                        </li>
+                        <li class="align-left" id="bar_recycle">
+                            <img src="{{ recycle_bin }}" alt="Recycle Bin">
+                        </li>
 
-                    <li class="align-right">
-                        <p>{{ time }}</p>
-                    </li>
-                    <li class="align-right border-left">
-                        <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
-                    </li>
-                    <li class="align-right">
-                        <a href="http://www.djangoproject.com">
-                            <img src="{{ django_logo }}" alt="Django">
-                        </a>
-                    </li>
-                    <li class="align-right">
-                        <a href="http://www.python.org">
-                            <img src="{{ python_logo }}" alt="Python">
-                        </a>
-                    </li>
-                    <li class="align-right">
-                        <a href="http://opensource.org/">
-                            <img src="{{ osi_logo }}" alt="Open Source Initiative">
-                        </a>
-                    </li>
-                    <li class="align-right">
-                        <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
-                            <img src="{{ html5_logo }}" alt="HTML5">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+                        <li class="align-right">
+                            <p>{{ time }}</p>
+                        </li>
+                        <li class="align-right border-left">
+                            <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
+                        </li>
+                        <li class="align-right">
+                            <a href="http://www.djangoproject.com">
+                                <img src="{{ django_logo }}" alt="Django">
+                            </a>
+                        </li>
+                        <li class="align-right">
+                            <a href="http://www.python.org">
+                                <img src="{{ python_logo }}" alt="Python">
+                            </a>
+                        </li>
+                        <li class="align-right">
+                            <a href="http://opensource.org/">
+                                <img src="{{ osi_logo }}" alt="Open Source Initiative">
+                            </a>
+                        </li>
+                        <li class="align-right">
+                            <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
+                                <img src="{{ html5_logo }}" alt="HTML5">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        {% endblock %}
 
         <script src="{{ windows_js }}"></script>
         <script src="{{ dnd_js }}"></script>
