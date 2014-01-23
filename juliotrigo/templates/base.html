@@ -10,6 +10,7 @@
 {% static "css/fonts.css" as fonts_css %}
 {% static "img/logos/logo45.png" as jt_logo_bar %}
 {% static "img/logos/logo32.png" as jt_logo_icon %}
+{% static "img/logos/favicon.ico" as favicon %}
 {% static "img/logos/Twitter.png" as twitter_logo %}
 {% static "img/logos/Octocat.png" as github_logo %}
 {% static "img/logos/LinkedIn.png" as linkedin_logo %}
@@ -34,11 +35,12 @@
 <html lang="{{ LANGUAGE_CODE }}" class="no-js">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}{% endblock %}</title>
-        <!--<meta name="viewport" content="width=device-width" />-->
+        <link rel="shortcut icon" href="{{ jt_logo_icon }}" type="image/png" />
+        <link rel="shortcut icon" href="{{ favicon }}" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="{{ fonts_css }}" />
         <link rel="stylesheet" type="text/css" href="{{ base_css }}" />
-        <link rel="shortcut icon" href="{{ jt_logo_icon }}" />
         <script src="{{ modernizr_js }}"></script>
     </head>
     <body>
