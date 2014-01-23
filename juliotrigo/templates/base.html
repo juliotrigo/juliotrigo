@@ -58,19 +58,22 @@
         {% block content %}
             <div id="content-wrapper">
                 <div id="first-column" class="column">
-                    <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);"
+                                         onclick="appWindows.showstuff('work', appWindows.folder.type);">
                         <p>
                             <img src="{{ folder_desktop }}" alt="Work">
                             {% trans "Work" %}
                         </p>
                     </div>
-                    <div class="file" ondblclick="appWindows.showstuff('projects', appWindows.folder.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('projects', appWindows.folder.type);"
+                                         onclick="appWindows.showstuff('projects', appWindows.folder.type);">
                         <p>
                             <img src="{{ folder_desktop }}" alt="Projects">
                             {% trans "Projects" %}
                         </p>
                     </div>
-                    <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('license', appWindows.firefox.type);"
+                                         onclick="appWindows.showstuff('license', appWindows.firefox.type);">
                         <p>
                             <img src="{{ firefox_logo }}" alt="LICENSE">
                             {% trans "LICENSE" %}
@@ -78,13 +81,15 @@
                     </div>
                 </div>
                 <div id="second-column" class="column">
-                    <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('about', appWindows.firefox.type);"
+                                         onclick="appWindows.showstuff('about', appWindows.firefox.type);">
                         <p>
                             <img src="{{ firefox_logo }}" alt="About">
                             {% trans "About" %}
                         </p>
                     </div>
-                    <div class="file" ondblclick="appWindows.showstuff('contact', appWindows.firefox.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('contact', appWindows.firefox.type);"
+                                         onclick="appWindows.showstuff('contact', appWindows.firefox.type);">
                         <p>
                             <img src="{{ firefox_logo }}" alt="Contact">
                             {% trans "Contact" %}
@@ -92,7 +97,8 @@
                     </div>
                 </div>
                 <div id="third-column" class="column">
-                    <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('readme', appWindows.txt.type);"
+                                         onclick="appWindows.showstuff('readme', appWindows.txt.type);">
                         <p>
                             <img src="{{ text_editor }}" alt="README">
                             {% trans "README" %}
@@ -100,7 +106,8 @@
                     </div>
                 </div>
                 <div id="recycle-bin" class="column">
-                    <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
+                    <div class="file" ondblclick="appWindows.showstuff('recycle', appWindows.recycle.type);"
+                                         onclick="appWindows.showstuff('recycle', appWindows.recycle.type);">
                         <p>
                             <img src="{{ recycle_bin }}" alt="Recycle Bin">
                             {% trans "Recycle" %}
