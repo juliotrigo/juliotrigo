@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-19 19:31+0000\n"
-"PO-Revision-Date: 2014-01-19 19:36+0100\n"
+"POT-Creation-Date: 2014-01-23 19:56+0000\n"
+"PO-Revision-Date: 2014-01-23 19:57+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:227 templates/base.html:120
+#: settings/defaults.py:227 templates/base.html:127
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:229 templates/base.html:118
+#: settings/defaults.py:229 templates/base.html:125
 msgid "Spanish"
 msgstr "Español"
 
@@ -98,41 +98,41 @@ msgstr ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
 "DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
 
-#: templates/base.html:64 templates/windows.html:8
+#: templates/base.html:65 templates/windows.html:8
 msgid "Work"
 msgstr "Trabajo"
 
-#: templates/base.html:70 templates/windows.html:20
+#: templates/base.html:72 templates/windows.html:20
 msgid "Projects"
 msgstr "Proyectos"
 
-#: templates/base.html:76
+#: templates/base.html:79
 msgid "LICENSE"
 msgstr "LICENCIA"
 
-#: templates/base.html:84
+#: templates/base.html:88
 msgid "About"
 msgstr "Acerca"
 
-#: templates/base.html:90
+#: templates/base.html:95
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/base.html:98 templates/windows.html:32
+#: templates/base.html:104 templates/windows.html:32
 msgid "README"
 msgstr "LEEME"
 
-#: templates/base.html:106
+#: templates/base.html:113
 msgid "Recycle"
 msgstr "Papelera"
 
-#: templates/base.html:183
+#: templates/base.html:190
 msgid "LAN"
 msgstr "LAN"
 
 #: templates/home.html:4
-msgid "juliotrigo - Software Engineer"
-msgstr "juliotrigo - Ingeniero Informático"
+msgid "Julio Trigo - Software Engineer"
+msgstr "Julio Trigo - Ingeniero Informático"
 
 #: templates/windows.html:11
 msgid "/home/juliotrigo/Desktop/Work"
@@ -204,6 +204,152 @@ msgid "My name is Julio Trigo and I am a software engineer based in London."
 msgstr ""
 "Mi nombre es Julio Trigo y soy un ingeniero sofware con residencia en "
 "Londres."
+
+#: templates/windows_readme.html:4
+msgid "Julio Trigo's website"
+msgstr "Julio Trigo - Página web"
+
+#: templates/windows_readme.html:6
+msgid "What is it?"
+msgstr "Qué es esto?"
+
+#: templates/windows_readme.html:8
+msgid "This is my personal website."
+msgstr "Ésta es mi página web personal."
+
+#: templates/windows_readme.html:9
+msgid ""
+"The aim of this site is to present some information about me and my work."
+msgstr ""
+"El propósito de esta página es mostrar algo de información acerca de mí y de "
+"mi trabajo."
+
+#: templates/windows_readme.html:11
+msgid "Version"
+msgstr "Versión"
+
+#: templates/windows_readme.html:13
+msgid "The current version of this project is v1.0.0."
+msgstr "La versión actual de este proyecto es v1.0.0."
+
+#: templates/windows_readme.html:15
+msgid "Technologies"
+msgstr "Tecnologías"
+
+#: templates/windows_readme.html:17
+msgid "This website is powered by Django, the Python Web framework."
+msgstr ""
+"Esta página web funciona gracias a Django, el framework web escrito en "
+"Python."
+
+#: templates/windows_readme.html:18
+msgid "It is all written in Python, HTML, CSS and JavaScript."
+msgstr "Todo el código está escrito en Python, HTML, CSS y JavaScript."
+
+#: templates/windows_readme.html:20
+msgid "Languages"
+msgstr "Idiomas"
+
+#: templates/windows_readme.html:22
+msgid ""
+"This website is translated into English and Spanish. It uses Django "
+"internationalization (I18N) for that purpose."
+msgstr ""
+"Esta página web está traducida al inglés y al español. Para ello se usa la "
+"internacionalización (I18N) de Django."
+
+#: templates/windows_readme.html:23
+msgid "The language can be selected at the taskbar."
+msgstr "El idioma se puede seleccionar en la barra de tareas."
+
+#: templates/windows_readme.html:25
+msgid "Design"
+msgstr "Diseño"
+
+#: templates/windows_readme.html:27
+msgid "Icons"
+msgstr "Iconos"
+
+#: templates/windows_readme.html:28
+msgid ""
+"You can either click or double click on an icon to trigger its default "
+"action."
+msgstr ""
+"Se puede hacer tanto un solo click como doble click sobre los iconos para "
+"ejecutar su acción por defecto."
+
+#: templates/windows_readme.html:30
+msgid "Windows"
+msgstr "Ventanas"
+
+#: templates/windows_readme.html:31
+msgid "All windows and folders are managed using CSS and JavaScript."
+msgstr "Todas las ventanas y carpetas se manejan usando CSS y JavaScript."
+
+#: templates/windows_readme.html:32
+msgid "You can drag and drop all windows on this site."
+msgstr "Se pueden arrastrar todas las ventanas en esta web."
+
+#: templates/windows_readme.html:33
+msgid ""
+"There are several window categories: folders, recycle bin, Web browsers and "
+"text editors."
+msgstr ""
+"Hay varias categorías de ventanas: carpetas, la papelera de reciclaje, "
+"navegadores web y editores de texto."
+
+#: templates/windows_readme.html:34
+msgid ""
+"Windows can be closed by clicking on the red button at the top left corner."
+msgstr ""
+"Las ventanas se pueden cerrar  pulsando en el botón rojo de la esquina "
+"superior izquierda."
+
+#: templates/windows_readme.html:36
+msgid "Taskbar"
+msgstr "Barra de Tareas"
+
+#: templates/windows_readme.html:37
+msgid ""
+"There is a taskbar at the bottom of the page which contains the website "
+"logo, links to some of my profiles on other sites, links to related "
+"technologies, the language selection bar and the time."
+msgstr ""
+"Hay una barra de tareas en la parte inferior de la página, la cual contiene "
+"el logo de la web, enlaces a algunos de mis perfiles en otras webs, enlaces "
+"a tecnologías relacionadas, la barra de selección del idioma y la hora."
+
+#: templates/windows_readme.html:39
+msgid "Source Code"
+msgstr "Código Fuente"
+
+#: templates/windows_readme.html:41
+msgid "This is an Open Source project hosted on GitHub:"
+msgstr "Éste es un proyecto Open Source alojado en GitHub:"
+
+#: templates/windows_readme.html:44
+msgid "Author"
+msgstr "Autor"
+
+#: templates/windows_readme.html:46
+msgid "Please see the file called About."
+msgstr "Por favor, ver el archivo Acerca."
+
+#: templates/windows_readme.html:48
+msgid "Contact Info"
+msgstr "Información  de Contacto"
+
+#: templates/windows_readme.html:50
+msgid "Please see the file called Contact."
+msgstr "Por favor, ver el archivo Contacto."
+
+#: templates/windows_readme.html:52
+msgid "Licensing"
+msgstr "Licencia"
+
+#: templates/windows_readme.html:54
+msgid "Please see the file called LICENSE."
+msgstr "Por favor, ver el archivo LICENCIA."
 
 #~ msgid "Go"
 #~ msgstr "Ir"
