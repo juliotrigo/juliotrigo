@@ -70,6 +70,10 @@ pre {
     font-size: 1em;
 }
 
+img{
+    border-width: 0px;
+}
+
 /*-----------------------------------------------------------------*/
 /*---------------------------- HEADER -----------------------------*/
 /*-----------------------------------------------------------------*/
@@ -609,7 +613,7 @@ footer li img {
     /*-----------------------------------------------------------------*/
 
     #content-wrapper {
-        margin: 0px 0px 60px 0px;
+        margin: 0px 0px 0px 0px;
     }
 
     .file {
@@ -789,6 +793,10 @@ footer li img {
     }
 }
 
+/*-----------------------------------------------------------------*/
+/*---------------------------- MEDIA ------------------------------*/
+/*-----------------------------------------------------------------*/
+
 @media only screen and
        (max-width : 669px) {
 
@@ -803,30 +811,101 @@ footer li img {
     #first-column,
     #second-column,
     #third-column,
-    #recycle-bin,
-    #language-bar,
-    #bottom-bar
+    #bar_folder,
+    #bar_firefox,
+    #bar_chromium,
+    #bar_txt,
+    #bar_recycle,
+    #bar_django,
+    #bar_python,
+    #bar_opensource,
+    #bar_html5
     {
         visibility: hidden;
         display: none;
     }
 
     body > header > h1 {
-        top: 12%;
-        left: 37%;
+        top: 25%;
+        left: 28%;
         font-size: 2.05em;
     }
 
     body > header > h2 {
-        top: 43%;
-        left: 30%;
-        width: 50%;
-        font-size: 1.2em;
+        top: 50%;
+        left: 20%;
+        width: 70%;
+        font-size: 1.1em;
     }
 
     body > header > h3 {
         top: 10px;
         right: 10px;
         font-size: 0.75em;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    .file {
+        margin: 10px 10px 0px 10px;
+        width: 25px;
+    }
+
+    .file > p {
+        font-size: 0.7em;
+    }
+
+    #recycle-bin {
+        right: 7px;  /* For the Spanish translation */
+        bottom: 46px;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    footer#bottom-bar {
+        height: 31px;
+    }
+
+    footer#bottom-bar li {
+        padding: 3px 3px 3px 3px;
+        width: 25px;
+    }
+
+    footer#bottom-bar li p {
+        padding: 5px 0px 5px 0px;
+        height: 15px;
+        font-size: 0.7em;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    #language-bar {
+        height: 76px;
+        width: 30px;
+        right: 42px;
+        bottom: -38px;
+        border-radius: 4px 4px 0px 0px;
+    }
+
+    #language-bar:hover {
+        bottom: 38px;
+    }
+
+    #language-bar > form > p {
+        padding: 5px 0px 0px 0px;
+        font-size: 0.8em;
+    }
+
+    /*-----------------------------------------------------------------*/
+
+    .file img,
+    footer li img {
+        height: 25px;
+        width: 25px;
+    }
+
+    #language-bar > form > p > input {
+        height: 25px;
+        width: 25px;
     }
 }
