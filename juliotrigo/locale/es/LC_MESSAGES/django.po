@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-23 19:56+0000\n"
-"PO-Revision-Date: 2014-01-23 19:57+0100\n"
+"POT-Creation-Date: 2014-01-25 14:05+0000\n"
+"PO-Revision-Date: 2014-01-25 16:46+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:227 templates/base.html:127
+#: settings/defaults.py:227 templates/base.html:129
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:229 templates/base.html:125
+#: settings/defaults.py:229 templates/base.html:127
 msgid "Spanish"
 msgstr "Español"
 
@@ -74,23 +74,23 @@ msgstr "500 Error interno en el servidor"
 msgid "Server error. There has been a server error."
 msgstr "Error en el servidor. Ha habido un error en el servidor."
 
-#: templates/base.html:47
+#: templates/base.html:49
 msgid "Julio Trigo"
 msgstr "Julio Trigo"
 
-#: templates/base.html:48
+#: templates/base.html:50
 msgid "Hi there, I'm a Software Engineer based in"
 msgstr "Hola, soy un ingeniero informático residente en"
 
-#: templates/base.html:48
+#: templates/base.html:50
 msgid "Alicante"
 msgstr "Alicante"
 
-#: templates/base.html:48
+#: templates/base.html:50
 msgid "London."
 msgstr "Londres."
 
-#: templates/base.html:49
+#: templates/base.html:51
 msgid ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
 "DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
@@ -98,35 +98,35 @@ msgstr ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
 "DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
 
-#: templates/base.html:65 templates/windows.html:8
+#: templates/base.html:67 templates/windows.html:8
 msgid "Work"
 msgstr "Trabajo"
 
-#: templates/base.html:72 templates/windows.html:20
+#: templates/base.html:74 templates/windows.html:20
 msgid "Projects"
 msgstr "Proyectos"
 
-#: templates/base.html:79
+#: templates/base.html:81
 msgid "LICENSE"
 msgstr "LICENCIA"
 
-#: templates/base.html:88
+#: templates/base.html:90
 msgid "About"
 msgstr "Acerca"
 
-#: templates/base.html:95
+#: templates/base.html:97
 msgid "Contact"
 msgstr "Contacto"
 
-#: templates/base.html:104 templates/windows.html:32
+#: templates/base.html:106 templates/windows.html:32
 msgid "README"
 msgstr "LEEME"
 
-#: templates/base.html:113
+#: templates/base.html:115
 msgid "Recycle"
 msgstr "Papelera"
 
-#: templates/base.html:190
+#: templates/base.html:192
 msgid "LAN"
 msgstr "LAN"
 
@@ -204,6 +204,18 @@ msgid "My name is Julio Trigo and I am a software engineer based in London."
 msgstr ""
 "Mi nombre es Julio Trigo y soy un ingeniero sofware con residencia en "
 "Londres."
+
+#: templates/windows_contact.html:3
+msgid "Drop me a line!"
+msgstr "Escríbeme!"
+
+#: templates/windows_contact.html:4
+msgid ""
+"If you want to get in touch, you can contact me via any of the social "
+"networks shown below or drop me an email at:"
+msgstr ""
+"Si quieres ponerte en contacto comigo, puedes utilizar las redes sociales "
+"que aparecen en la barra de tareas o escribirme un email a:"
 
 #: templates/windows_readme.html:4
 msgid "Julio Trigo's website"
