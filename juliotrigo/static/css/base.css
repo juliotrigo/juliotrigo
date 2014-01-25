@@ -336,6 +336,15 @@ body > header > h3 {
     font-family: 'PT Mono', 'Ubuntu Mono', 'Source Sans Pro', 'PT Sans', 'Lato', Verdana, Helvetica, Arial, sans-serif;
 }
 
+p span.displaynone {
+    display: none;
+}
+
+p span.email {
+    font-weight: bold;
+    color: #004875;  /* #36393b #026aaa #024D7C */
+}
+
 #about-column {
     width: 40%;
 }
@@ -577,24 +586,24 @@ footer li img {
 /*---------------------------- MEDIA ------------------------------*/
 /*-----------------------------------------------------------------*/
 
-/* max-width : 1050px and min-width : 620px TODO */
 @media only screen and
        (min-width : 670px) and
        (max-width : 1130px) {
 
     body > header > h1 {
-        font-size: 3.5em;  /* 3.08em */
+        left: 35%;
+        font-size: 3.7em;  /* 3.5em */
     }
 
     body > header > h2 {
         width: 50%;
-        font-size: 2.04em;  /* 1.68em */
+        font-size: 2.04em;
     }
 
     body > header > h3 {
-        top: 10px;
-        right: 10px;
-        font-size: 1.28em;  /* 1.1em */
+        top: 14px;
+        right: 14px;
+        font-size: 1.28em;
     }
 
     /*-----------------------------------------------------------------*/
@@ -604,7 +613,7 @@ footer li img {
     }
 
     .file {
-        margin: 10px 10px 0px 10px;
+        margin: 14px 14px 0px 14px;
         width: 30px;
     }
 
@@ -613,14 +622,15 @@ footer li img {
     }
 
     #second-column {
-        left: 50px;
+        left: 58px;
     }
 
     #third-column {
-        left: 100px;
+        left: 116px;
     }
 
     #recycle-bin {
+        right: 5px;  /* For the Spanish translation */
         bottom: 51px;
     }
 
@@ -670,7 +680,7 @@ footer li img {
         font-size: 0.8em;
     }
 
-    .browser-content h2 {
+    #license h2 {
         text-shadow: 3px 3px 3px #aaa;
     }
 
@@ -779,19 +789,44 @@ footer li img {
     }
 }
 
-
-/*
-TODO
 @media only screen and
-       (min-width : 320px) and
-       (max-width : 568px){
+       (max-width : 669px) {
 
-    .file {
-        margin: 5px 5px 0px 5px;
+    #watermark,
+    #work,
+    #projects,
+    #recycle,
+    #readme,
+    #license,
+    #about,
+    #contact,
+    #first-column,
+    #second-column,
+    #third-column,
+    #recycle-bin,
+    #language-bar,
+    #bottom-bar
+    {
+        visibility: hidden;
+        display: none;
     }
 
-    #name {
-        font-size: 1.76em;
+    body > header > h1 {
+        top: 12%;
+        left: 37%;
+        font-size: 2.05em;
+    }
+
+    body > header > h2 {
+        top: 43%;
+        left: 30%;
+        width: 50%;
+        font-size: 1.2em;
+    }
+
+    body > header > h3 {
+        top: 10px;
+        right: 10px;
+        font-size: 0.75em;
     }
 }
-*/
