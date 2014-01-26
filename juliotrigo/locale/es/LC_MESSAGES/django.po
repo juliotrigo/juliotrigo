@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-25 14:05+0000\n"
-"PO-Revision-Date: 2014-01-25 16:46+0100\n"
+"POT-Creation-Date: 2014-01-26 18:34+0000\n"
+"PO-Revision-Date: 2014-01-26 18:39+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -47,7 +47,8 @@ msgid "403 Forbidden"
 msgstr "403 Acceso prohibido"
 
 #: templates/403.html:8
-msgid "Permission denied. You don't have the permission to do this action."
+msgid ""
+"Permission denied. You do not have the permission to perform this action."
 msgstr "Pemiso denegado. Usted no tiene permiso para realizar esta acción."
 
 #: templates/404.html:4
@@ -126,7 +127,7 @@ msgstr "LEEME"
 msgid "Recycle"
 msgstr "Papelera"
 
-#: templates/base.html:192
+#: templates/base.html:197
 msgid "LAN"
 msgstr "LAN"
 
@@ -199,11 +200,15 @@ msgstr "file:///home/juliotrigo/Escritorio/Contacto.html"
 msgid "Recycle Bin"
 msgstr "Papelera de reciclaje"
 
-#: templates/windows_about.html:5
-msgid "My name is Julio Trigo and I am a software engineer based in London."
+#: templates/windows_about.html:4
+msgid "About me"
+msgstr "Acerca de mí"
+
+#: templates/windows_about.html:6
+msgid "My name is Julio Trigo and I am a software engineer working in London."
 msgstr ""
-"Mi nombre es Julio Trigo y soy un ingeniero sofware con residencia en "
-"Londres."
+"Mi nombre es Julio Trigo y soy un ingeniero informático que actualmente "
+"trabaja en Londres."
 
 #: templates/windows_contact.html:3
 msgid "Drop me a line!"
