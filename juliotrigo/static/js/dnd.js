@@ -15,6 +15,12 @@ var contact = document.getElementById('contact');
 var recycle = document.getElementById('recycle');
 var wrapper = document.getElementById('content-wrapper');
 
+//var work_cesser = document.getElementById('work-cesser');
+//var work_webfusion = document.getElementById('work-webfusion');
+//var projects_djangoapps = document.getElementById('projects-djangoapps');
+//var projects_restfulwebapi = document.getElementById('projects-restfulwebapi');
+//var projects_juliotrigo = document.getElementById('projects-juliotrigo');
+
 // Set them to 0 in the CSS file and assign the real coordinates here to avoid errors.
 work.style.top = '20px';
 work.style.left = '20px';
@@ -48,6 +54,7 @@ function handleDragStart(event) {
     offset = elementID + ',' + (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY);
 
     event.dataTransfer.setData(PLAIN_DRAG_TYPE, offset);
+    //event.dataTransfer.setDragImage(null, 0, 0);  // TODO
     //event.dataTransfer.effectAllowed = 'move';
     //event.dataTransfer.dropEffect = 'move';
 
