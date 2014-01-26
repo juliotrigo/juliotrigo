@@ -367,17 +367,52 @@ var appWindows = {
 
 /*------------------------- CSS Transitions -----------------------*/
 
+var elementLanguageBar = document.getElementById('language-bar');
 var is_lan_expanded = false;
+
+var DESKTOP_LAN_HEIGHT = 110;
+var TABLET_LAN_HEIGHT = 76;
+var PHONE_LAN_HEIGHT = 62;
+
+var DESKTOP_LAN_UP = "55px";
+var DESKTOP_LAN_DOWN = "-55px";
+var TABLET_LAN_UP = "38px";
+var TABLET_LAN_DOWN = "-38px";
+var PHONE_LAN_UP = "31px";
+var PHONE_LAN_DOWN = "-31px";
 
 /**
  * Expands or contracts the language selection bar.
  */
 function expand_contract_lan() {
-    if (!is_lan_expanded) {
-        document.getElementById('language-bar').style.bottom = "55px";
-        is_lan_expanded = true;
-    } else {
-        document.getElementById('language-bar').style.bottom = "-55px";
+
+    var clientHeight = elementLanguageBar.clientHeight;
+
+    if (is_lan_expanded) {
+        switch (clientHeight) {
+            case DESKTOP_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = DESKTOP_LAN_DOWN;
+                break;
+            case TABLET_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = TABLET_LAN_DOWN;
+                break;
+            case PHONE_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = PHONE_LAN_DOWN;
+                break;
+        }
         is_lan_expanded = false;
+    } else {
+        switch (clientHeight) {
+            case DESKTOP_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = DESKTOP_LAN_UP;
+                break;
+            case TABLET_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = TABLET_LAN_UP;
+                break;
+            case PHONE_LAN_HEIGHT:
+                elementLanguageBar.style.bottom = PHONE_LAN_UP;
+                break;
+        }
+        is_lan_expanded = true;
     }
 }
