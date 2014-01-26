@@ -276,12 +276,12 @@ body > header > h3 {
 }
 
 #readme > h1 {
-    background: #B2B2FF;
+    background: #90A4FF;  /* #B2B2FF #A1B2FF #90A4FF */
     color: black;
 }
 
 #license > h1, #about > h1, #contact > h1 {
-    background: #757588;  /* #8787A1 #7A7A90 #757588 */
+    background: #68687F;  /* #8787A1 #7A7A90 #757588 #68687F */
 }
 
 .window > h1 > img {
