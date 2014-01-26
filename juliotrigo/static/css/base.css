@@ -299,6 +299,10 @@ body > header > h3 {
     color: black;
 }
 
+.browser-content h2 {
+    margin-top: 20px;
+}
+
 .txt-content h2, .txt-content p {
     padding: 0px;
 
