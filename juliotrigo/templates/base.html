@@ -57,8 +57,8 @@
                 -->
             {% endblock %}
         </header>
-        {% block content %}
-            <div id="content-wrapper">
+        <div id="content-wrapper">
+            {% block content %}
                 <div id="first-column" class="column">
                     <div class="file" ondblclick="appWindows.showstuff('work', appWindows.folder.type);"
                                          onclick="appWindows.showstuff('work', appWindows.folder.type);">
@@ -134,8 +134,10 @@
                     {% endfor %}
                 </div>
                 {% block windows %}{% endblock %}
-            </div>
-            <footer id="bottom-bar">
+            {% endblock %}
+        </div>
+        <footer id="bottom-bar">
+            {% block footer %}
                 <div>
                     <ul>
                         <li class="align-left">
@@ -169,52 +171,59 @@
                             </a>
                         </li>
 
-                        <li class="align-left" id="bar_folder">
-                            <img src="{{ folder_desktop }}" alt="Folder">
-                        </li>
-                        <li class="align-left" id="bar_firefox">
-                            <img src="{{ firefox_logo }}" alt="Firefox">
-                        </li>
-                        <li class="align-left" id="bar_chromium">
-                            <img src="{{ chromium_logo }}" alt="Chromium">
-                        </li>
-                        <li class="align-left" id="bar_txt">
-                            <img src="{{ text_editor }}" alt="Text">
-                        </li>
-                        <li class="align-left" id="bar_recycle">
-                            <img src="{{ recycle_bin }}" alt="Recycle Bin">
-                        </li>
+                        {% block taskbar_hidden %}
+                            <li class="align-left" id="bar_folder">
+                                <img src="{{ folder_desktop }}" alt="Folder">
+                            </li>
+                            <li class="align-left" id="bar_firefox">
+                                <img src="{{ firefox_logo }}" alt="Firefox">
+                            </li>
+                            <li class="align-left" id="bar_chromium">
+                                <img src="{{ chromium_logo }}" alt="Chromium">
+                            </li>
+                            <li class="align-left" id="bar_txt">
+                                <img src="{{ text_editor }}" alt="Text">
+                            </li>
+                            <li class="align-left" id="bar_recycle">
+                                <img src="{{ recycle_bin }}" alt="Recycle Bin">
+                            </li>
+                        {% endblock %}
 
-                        <li class="align-right">
-                            <p>{{ time }}</p>
-                        </li>
-                        <li class="align-right border-left">
-                            <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
-                        </li>
-                        <li class="align-right" id="bar_django">
-                            <a href="http://www.djangoproject.com">
-                                <img src="{{ django_logo }}" alt="Django">
-                            </a>
-                        </li>
-                        <li class="align-right" id="bar_python">
-                            <a href="http://www.python.org">
-                                <img src="{{ python_logo }}" alt="Python">
-                            </a>
-                        </li>
-                        <li class="align-right" id="bar_opensource">
-                            <a href="http://opensource.org/">
-                                <img src="{{ osi_logo }}" alt="Open Source Initiative">
-                            </a>
-                        </li>
-                        <li class="align-right" id="bar_html5">
-                            <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
-                                <img src="{{ html5_logo }}" alt="HTML5">
-                            </a>
-                        </li>
+                        {% block taskbar_tools %}
+                            <li class="align-right">
+                                <p>{{ time }}</p>
+                            </li>
+                            <li class="align-right border-left">
+                                <p id="lan" onClick="expand_contract_lan()">{% trans "LAN" %}</p>
+                            </li>
+                        {% endblock %}
+
+                        {% block taskbar_technologies %}
+                            <li class="align-right" id="bar_django">
+                                <a href="http://www.djangoproject.com">
+                                    <img src="{{ django_logo }}" alt="Django">
+                                </a>
+                            </li>
+                            <li class="align-right" id="bar_python">
+                                <a href="http://www.python.org">
+                                    <img src="{{ python_logo }}" alt="Python">
+                                </a>
+                            </li>
+                            <li class="align-right" id="bar_opensource">
+                                <a href="http://opensource.org/">
+                                    <img src="{{ osi_logo }}" alt="Open Source Initiative">
+                                </a>
+                            </li>
+                            <li class="align-right" id="bar_html5">
+                                <a href="http://validator.w3.org/nu/?doc=http%3A%2F%2Fjuliotrigo.com">
+                                    <img src="{{ html5_logo }}" alt="HTML5">
+                                </a>
+                            </li>
+                        {% endblock %}
                     </ul>
                 </div>
-            </footer>
-        {% endblock %}
+            {% endblock %}
+        </footer>
 
         <script src="{{ windows_js }}"></script>
         <script src="{{ dnd_js }}"></script>

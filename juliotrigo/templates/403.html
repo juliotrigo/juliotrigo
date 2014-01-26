@@ -5,18 +5,9 @@
 
 {% block header %}
     <h1>{% trans "403 Forbidden" %}</h1>
-    <p>{% trans "Permission denied. You don't have the permission to do this action." %}</p>
+    <h2>{% trans "Permission denied. You do not have the permission to perform this action." %}</h2>
 {% endblock %}
-{% block content %}
-    <div id="content-wrapper">
-        <div id="first-column" class="column">
-            <div class="file">
-                <p>
-                    <a href="{% url 'home' %}">
-                        <img src="{{ jt_logo_bar }}" alt="Julio Trigo logo">
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-{% endblock %}
+{% block content %}{% endblock %}
+{% block taskbar_hidden %}{% endblock %}
+{% block taskbar_tools %}{% endblock %}
+{% block taskbar_technologies %}{% endblock %}
