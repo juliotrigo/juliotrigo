@@ -99,7 +99,12 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '$agm#=)ys*r-ug)!q3-pthl7@rfk9ad9$_r78vdjv4jh_cxq9j'
+#SECRET_KEY = '$agm#=)ys*r-ug)!q3-pthl7@rfk9ad9$_r78vdjv4jh_cxq9j'
+try:
+    with open(os.path.join(BASE_DEPLOY, 'etc', 'secret_key.txt')) as f:
+        SECRET_KEY = f.read().strip()
+except IOError:
+    SECRET_KEY = '$agm#=)ys*r-ug)!q3-pthl7@rfk9ad9$_r78vdjv4jh_cxq9j'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
