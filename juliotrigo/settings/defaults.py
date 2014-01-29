@@ -180,14 +180,14 @@ LOGGING = {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
-            'filename': '/var/www/juliotrigo/log/info.log',
+            'filename': os.path.join(BASE_DEPLOY, 'log', 'info.log'),
             'formatter': 'verbose'
         },
         'file_error': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
-            'filename': '/var/www/juliotrigo/log/error.log',
+            'filename': os.path.join(BASE_DEPLOY, 'log', 'error.log'),
             'formatter': 'verbose'
         },
         'mail_admins': {
