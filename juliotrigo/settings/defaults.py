@@ -9,7 +9,9 @@ from django.conf import global_settings as DEFAULT_SETTINGS
 
 PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__).replace('\\','/'), '..'))
 BASE_PATH = os.path.abspath(os.path.join(PROJECT_PATH, '..'))
-BASE_DEPLOY = '/var/www/juliotrigo'
+BASE_WWW = '/var/www/juliotrigo'
+BASE_LOG = '/var/log/django-sites/juliotrigo'
+BASE_ETC = '/etc/django-sites/juliotrigo'
 
 # This is defined here as a do-nothing function because we can't import
 # django.utils.translation -- that module depends on the settings.
@@ -25,7 +27,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(BASE_DEPLOY, 'bd', 'sqlite3_juliotrigo.db'), # Or path to database file if using sqlite3.
+        'NAME': os.path.join(BASE_PATH, 'bd', 'sqlite3_juliotrigo.db'), # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
@@ -76,7 +78,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(BASE_DEPLOY, 'static')
+STATIC_ROOT = os.path.join(BASE_WWW, 'static')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -101,7 +103,7 @@ STATICFILES_FINDERS = (
 # Make this unique, and don't share it with anybody.
 #SECRET_KEY = '$agm#=)ys*r-ug)!q3-pthl7@rfk9ad9$_r78vdjv4jh_cxq9j'
 try:
-    with open(os.path.join(BASE_DEPLOY, 'etc', 'secret_key.txt')) as f:
+    with open(os.path.join(BASE_ETC, 'secret_key.txt')) as f:
         SECRET_KEY = f.read().strip()
 except IOError:
     SECRET_KEY = '$agm#=)ys*r-ug)!q3-pthl7@rfk9ad9$_r78vdjv4jh_cxq9j'
@@ -180,14 +182,14 @@ LOGGING = {
             'level': 'INFO',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DEPLOY, 'log', 'info.log'),
+            'filename': os.path.join(BASE_LOG, 'log', 'info.log'),
             'formatter': 'verbose'
         },
         'file_error': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DEPLOY, 'log', 'error.log'),
+            'filename': os.path.join(BASE_LOG, 'log', 'error.log'),
             'formatter': 'verbose'
         },
         'mail_admins': {
