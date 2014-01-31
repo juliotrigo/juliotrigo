@@ -1,1 +1,1 @@
-from juliotrigo.settings.development import *
+from juliotrigo.settings.production import *
