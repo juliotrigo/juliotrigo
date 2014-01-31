@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 18:34+0000\n"
-"PO-Revision-Date: 2014-01-26 18:39+0100\n"
+"POT-Creation-Date: 2014-01-31 21:30+0000\n"
+"PO-Revision-Date: 2014-01-31 21:31+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:227 templates/base.html:129
+#: settings/defaults.py:234 templates/base.html:129
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:229 templates/base.html:127
+#: settings/defaults.py:236 templates/base.html:127
 msgid "Spanish"
 msgstr "Español"
 
@@ -93,11 +93,11 @@ msgstr "Londres."
 
 #: templates/base.html:51
 msgid ""
-"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
-"DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
+"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB,"
+"<br>XML, JSON, Ajax,<br>JavaScript,<br>Linux"
 msgstr ""
-"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, "
-"DB<br>XML, JSON, Ajax,<br>JavaScript<br>Linux"
+"Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB,"
+"<br>XML, JSON, Ajax,<br>JavaScript,<br>Linux"
 
 #: templates/base.html:67 templates/windows.html:8
 msgid "Work"
