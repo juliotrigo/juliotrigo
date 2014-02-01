@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-31 21:30+0000\n"
-"PO-Revision-Date: 2014-01-31 21:31+0100\n"
+"POT-Creation-Date: 2014-02-01 02:08+0000\n"
+"PO-Revision-Date: 2014-02-01 02:08+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "MIME-Version: 1.0\n"
@@ -246,8 +246,8 @@ msgid "Version"
 msgstr "Versión"
 
 #: templates/windows_readme.html:13
-msgid "The current version of this project is v1.0.0."
-msgstr "La versión actual de este proyecto es v1.0.0."
+msgid "The current version of this project is 1.0.0."
+msgstr "La versión actual de este proyecto es 1.0.0."
 
 #: templates/windows_readme.html:15
 msgid "Technologies"
