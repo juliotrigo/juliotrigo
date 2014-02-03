@@ -7,10 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-01 02:08+0000\n"
-"PO-Revision-Date: 2014-02-01 02:08+0100\n"
+"POT-Creation-Date: 2014-02-03 01:08+0000\n"
+"PO-Revision-Date: 2014-02-03 01:02+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -72,8 +73,8 @@ msgid "500 Internal Server Error"
 msgstr "500 Error interno en el servidor"
 
 #: templates/500.html:8
-msgid "Server error. There has been a server error."
-msgstr "Error en el servidor. Ha habido un error en el servidor."
+msgid "There has been a server error."
+msgstr "Ha habido un error en el servidor."
 
 #: templates/base.html:49
 msgid "Julio Trigo"
@@ -205,22 +206,48 @@ msgid "About me"
 msgstr "Acerca de mí"
 
 #: templates/windows_about.html:6
-msgid "My name is Julio Trigo and I am a software engineer working in London."
+msgid "My name is Julio Trigo and I am a software engineer based in London."
 msgstr ""
-"Mi nombre es Julio Trigo y soy un ingeniero informático que actualmente "
-"trabaja en Londres."
+"Mi nombre es Julio Trigo y soy un Ingeniero Informático que actualmente "
+"reside en Londres."
+
+#: templates/windows_about.html:9
+msgid ""
+"I graduated in 2007 with an engineer's degree in Computer Science and "
+"Software Engineering at"
+msgstr "Me gradué en 2007 como Ingeniero Ingormático en la"
+
+#: templates/windows_about.html:9
+msgid "University of Alicante"
+msgstr "Universidad de Alicante"
+
+#: templates/windows_about.html:9
+msgid "and I have been working as a software developer since then."
+msgstr "y he estado trabajando como desarrollador software desde entonces."
+
+#: templates/windows_about.html:12
+msgid ""
+"I am also a Python enthusiast, always learning new standards and "
+"technologies."
+msgstr ""
+"Soy un entusiasta del lenguage Python, siempre aprendiendo nuevos estándares "
+"y tecnologías."
 
 #: templates/windows_contact.html:3
 msgid "Drop me a line!"
 msgstr "Escríbeme!"
 
 #: templates/windows_contact.html:4
-msgid ""
-"If you want to get in touch, you can contact me via any of the social "
-"networks shown below or drop me an email at:"
-msgstr ""
-"Si quieres ponerte en contacto comigo, puedes utilizar las redes sociales "
-"que aparecen en la barra de tareas o escribirme un email a:"
+msgid "If you want to get in touch, you can drop me an email at:"
+msgstr "Si quieres ponerte en contacto comigo, puedes escribirme un email a:"
+
+#: templates/windows_contact.html:5
+msgid "at"
+msgstr "arroba"
+
+#: templates/windows_contact.html:5
+msgid "dot"
+msgstr "punto"
 
 #: templates/windows_readme.html:4
 msgid "Julio Trigo's website"
