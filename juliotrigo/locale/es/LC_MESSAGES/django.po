@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: juliotrigo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-03 01:08+0000\n"
-"PO-Revision-Date: 2014-02-03 01:02+0100\n"
+"POT-Creation-Date: 2014-02-16 20:04+0000\n"
+"PO-Revision-Date: 2014-02-16 20:04+0100\n"
 "Last-Translator: juliotrigo\n"
 "Language-Team: translation\n"
 "Language: \n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: settings/defaults.py:234 templates/base.html:129
+#: settings/defaults.py:236 templates/base.html:129
 msgid "English"
 msgstr "Inglés"
 
-#: settings/defaults.py:236 templates/base.html:127
+#: settings/defaults.py:238 templates/base.html:127
 msgid "Spanish"
 msgstr "Español"
 
@@ -82,7 +82,7 @@ msgstr "Julio Trigo"
 
 #: templates/base.html:50
 msgid "Hi there, I'm a Software Engineer based in"
-msgstr "Hola, soy un ingeniero informático residente en"
+msgstr "Hola, soy un Ingeniero Informático residente en"
 
 #: templates/base.html:50
 msgid "Alicante"
@@ -95,10 +95,10 @@ msgstr "Londres."
 #: templates/base.html:51
 msgid ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB,"
-"<br>XML, JSON, Ajax,<br>JavaScript,<br>Linux"
+"<br>XML, JSON, DRY,<br>JavaScript,<br>Linux"
 msgstr ""
 "Python, Django, REST, GIT,<br>HTML, CSS, Apache, C,<br>ERP, NAV, SQL, DB,"
-"<br>XML, JSON, Ajax,<br>JavaScript,<br>Linux"
+"<br>XML, JSON, DRY,<br>JavaScript,<br>Linux"
 
 #: templates/base.html:67 templates/windows.html:8
 msgid "Work"
@@ -208,30 +208,30 @@ msgstr "Acerca de mí"
 #: templates/windows_about.html:6
 msgid "My name is Julio Trigo and I am a software engineer based in London."
 msgstr ""
-"Mi nombre es Julio Trigo y soy un Ingeniero Informático que actualmente "
-"reside en Londres."
+"Mi nombre es Julio Trigo, soy Ingeniero Informático y en la actualidad "
+"resido y trabajo en Londres."
 
 #: templates/windows_about.html:9
 msgid ""
 "I graduated in 2007 with an engineer's degree in Computer Science and "
 "Software Engineering at"
-msgstr "Me gradué en 2007 como Ingeniero Ingormático en la"
+msgstr "En el año 2007 me gradué en Ingeniería Informática en la"
 
 #: templates/windows_about.html:9
 msgid "University of Alicante"
 msgstr "Universidad de Alicante"
 
 #: templates/windows_about.html:9
-msgid "and I have been working as a software developer since then."
-msgstr "y he estado trabajando como desarrollador software desde entonces."
+msgid "(Spain) and I have been working as a software developer since then."
+msgstr "y he estado trabajando como desarrollador de software desde entonces."
 
 #: templates/windows_about.html:12
 msgid ""
-"I am also a Python enthusiast, always learning new standards and "
-"technologies."
+"I am a Python enthusiast concerned about software quality and coding "
+"standards and passionate about software development."
 msgstr ""
-"Soy un entusiasta del lenguage Python, siempre aprendiendo nuevos estándares "
-"y tecnologías."
+"Soy un entusiasta del lenguaje Python, interesado en calidad del software y "
+"estándares de programación y un apasionado del desarrollo de software."
 
 #: templates/windows_contact.html:3
 msgid "Drop me a line!"
@@ -262,19 +262,18 @@ msgid "This is my personal website."
 msgstr "Ésta es mi página web personal."
 
 #: templates/windows_readme.html:9
-msgid ""
-"The aim of this site is to present some information about me and my work."
+msgid "The aim of this site is to provide information about me and my work."
 msgstr ""
-"El propósito de esta página es mostrar algo de información acerca de mí y de "
-"mi trabajo."
+"El propósito de esta página es mostrar información acerca de mí y de mi "
+"trabajo."
 
 #: templates/windows_readme.html:11
 msgid "Version"
 msgstr "Versión"
 
 #: templates/windows_readme.html:13
-msgid "The current version of this project is 1.0.0."
-msgstr "La versión actual de este proyecto es 1.0.0."
+msgid "The current version of this project is "
+msgstr "La versión actual de este proyecto es"
 
 #: templates/windows_readme.html:15
 msgid "Technologies"
@@ -394,6 +393,20 @@ msgstr "Licencia"
 #: templates/windows_readme.html:54
 msgid "Please see the file called LICENSE."
 msgstr "Por favor, ver el archivo LICENCIA."
+
+#~ msgid ""
+#~ "I am a passionate Python software developer, with a C, Java and C/AL (NAV "
+#~ "ERP) background."
+#~ msgstr ""
+#~ "Soy un apasionado del desarrollo software con Python, con unas bases de "
+#~ "programación en C, Java y C/AL (NAV ERP)."
+
+#~ msgid ""
+#~ "I am also a Python enthusiast, always learning new standards and "
+#~ "technologies."
+#~ msgstr ""
+#~ "Soy un entusiasta del lenguaje Python, siempre aprendiendo nuevos "
+#~ "estándares y tecnologías."
 
 #~ msgid "Go"
 #~ msgstr "Ir"
