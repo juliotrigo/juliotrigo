@@ -1,0 +1,4 @@
+Django==1.5.1
+git+git://github.com/juliotrigo/django-accounts.git@master
+pep8==1.4.6
+pylint==1.1.0
